@@ -4,19 +4,17 @@ import image from '../assets/dummy.png';
 
 import ProductButton from './ProductButton';
 
-function HorizontalCard (props) {
+function HorizontalCard ({title, description, price, quantity}) {
     return (
      <article className="hcard">
-         <img className="hcard__image" src={image} alt="Product image" />
+         <img className="hcard__image" src={image} alt={title} />
          <div className="hcard__info">
-            <p className="hcard__title">blue notebook</p>
-            <p className="hcard__description">Save all your notes in this amazing notebook. 
-                It has 100 blank pages to be filled with your stories.
-            </p>
+            <p className="hcard__title">{title}</p>
+            <p className="hcard__description">{description}</p>
             <div className="hcard__info-bottom">
                 <div className="hcard__details">
-                    <p><span className="hcard__property">Price:</span> $10.00</p>
-                    <p><span className="hcard__property">Quantity:</span> 1</p>
+                    <p><span className="hcard__property">Price:</span> ${price}</p>
+                    <p><span className="hcard__property">Quantity:</span> {quantity}</p>
                 </div>
                 <div className="hcard__buttons">
                     <ProductButton text="Edit" style="btn btn-primary"/>
