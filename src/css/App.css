@@ -4,6 +4,78 @@
   box-sizing: border-box;
 }
 
+.hcard {
+  display: flex;
+  align-items: center;
+  background-color: rgba(181, 170, 153, 0.4);
+  border-radius: 1rem;
+  min-width: 320px;
+  max-width: 600px;
+}
+.hcard__image {
+  margin: 1rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.hcard__info {
+  flex-direction: column;
+  margin: 1rem;
+  text-align: left;
+}
+.hcard__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.hcard__description {
+  margin: 0.5rem 0;
+}
+.hcard__info-bottom {
+  display: flex;
+  align-items: center;
+}
+.hcard__property {
+  font-weight: bold;
+}
+.hcard__details {
+  width: 50%;
+}
+.hcard__buttons {
+  display: flex;
+  justify-content: right;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .hcard {
+    flex-direction: column;
+  }
+
+  .hcard__info {
+    text-align: center;
+  }
+}
+.btn {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  margin: 0.2rem 0.5rem;
+  min-width: 5rem;
+}
+.btn:focus {
+  border: 2px solid rgba(181, 170, 153, 0.4);
+}
+.btn-primary {
+  background-color: #FDBD10;
+}
+.btn-secondary {
+  background-color: #000000;
+}
+
 .App {
   text-align: center;
 }
