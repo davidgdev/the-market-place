@@ -79,23 +79,35 @@
 
 .prodDesc {
   display: flex;
-  border: 1px solid black;
 }
-.prodDesc__info {
-  border: 1px solid black;
+
+.prodDetails {
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding-left: 0.5rem;
+  margin: 0 0.8rem;
 }
-.prodDesc__info-title {
-  font-size: 1.8rem;
+.prodDetails__title {
+  font-size: 2rem;
   font-weight: bold;
 }
-.prodDesc__info-description {
-  margin: 0.5rem 0;
+.prodDetails__description {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
-.prodDesc__info-bottom {
+.prodDetails__bottom {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.prodDetails__property {
+  font-weight: bold;
+}
+.prodDetails__buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2rem;
 }
 
 .photo__card {
