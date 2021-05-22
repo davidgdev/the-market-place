@@ -1,0 +1,29 @@
+@import '../abstracts/variables';
+
+.photo {
+
+    &__card {
+        display: flex;
+        align-items: center;
+        background-color: $primary;
+        border-radius: 1rem;
+    }
+
+    &__img {
+        padding: 10px;
+        
+        &--small {
+            width: 100px;
+            height: 100px;
+            border-radius: 1rem;
+        }
+
+        &--large {
+            width: 350px;
+            height: 350px;
+            border-radius: 1.5rem;
+            padding: 1rem;
+        }
+    }
+    
+}

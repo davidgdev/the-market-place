@@ -11,9 +11,10 @@
   border-radius: 1rem;
   min-width: 320px;
   max-width: 600px;
+  margin: auto;
 }
 .hcard__image {
-  margin: 1rem;
+  margin: 2rem;
   height: 10rem;
   border-radius: 0.5rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -74,6 +75,48 @@
 }
 .btn-secondary {
   background-color: #000000;
+}
+
+.prodDesc {
+  display: flex;
+  border: 1px solid black;
+}
+.prodDesc__info {
+  border: 1px solid black;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.prodDesc__info-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.prodDesc__info-description {
+  margin: 0.5rem 0;
+}
+.prodDesc__info-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.photo__card {
+  display: flex;
+  align-items: center;
+  background-color: #FDBD10;
+  border-radius: 1rem;
+}
+.photo__img {
+  padding: 10px;
+}
+.photo__img--small {
+  width: 100px;
+  height: 100px;
+  border-radius: 1rem;
+}
+.photo__img--large {
+  width: 350px;
+  height: 350px;
+  border-radius: 1.5rem;
+  padding: 1rem;
 }
 
 .App {
