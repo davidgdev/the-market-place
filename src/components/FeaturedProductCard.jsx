@@ -4,9 +4,10 @@ import image from '../assets/dummy.png';
 
 import ProductButton from './ProductButton';
 
-function FeatureProductCard ({title, price}) {
+function FeatureProductCard ({title, price, index}) {
+    const featuredClass = (index % 2 == 0) ? 'even' : 'odd';
     return (
-     <article className="featured__card">
+     <article className={`featured__card ${featuredClass}`} >
          <img className="featured__card-image" src={image} alt={title} />
          <div className="featured__card-info">
             <p className="featured__card-title">{title}</p>
