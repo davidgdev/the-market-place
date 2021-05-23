@@ -1,0 +1,34 @@
+@import '../abstracts/variables';
+
+.featured__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+    height: 316px;
+    border-radius: 1rem;
+    background-color: $primary;
+
+    &-image {
+        margin: 0rem auto .4rem auto;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 0.5rem;
+    }
+    &-info {
+        padding: 0 1rem;
+        text-align: left;
+    }
+    &-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    &-info-details {
+        font-size: 1.5rem;
+    }
+    &-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+    
