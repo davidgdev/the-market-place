@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './sass/App.scss';
 
 import SellerProductList from './components/SellerProductList.jsx';
