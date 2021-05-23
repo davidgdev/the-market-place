@@ -1,28 +1,52 @@
-import logo from './logo.svg';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import './sass/App.scss';
 
-import HorizontalCard from './components/HorizontalCard.jsx';
 
 function App() {
   return (
-    <div className="App">
-{/*       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <HorizontalCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                It has 100 blank pages to be filled with your stories." price="10.00" quantity="5"/>
+    <BrowserRouter>
+      <div>
+      <header className="header">
+        <nav className="nav">
+          <ul>
+            <li>
+              <Link to="/" className="">
+                <h1>
+                  <span className="nav__title-black">Market</span>
+                  <span className="nav__title-white">Place</span>
+                </h1>
+                <img className="nav__logo" src="" alt="Logo cart shopping"></img>
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="nav__item">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/categories" className="nav__item">
+                Categories
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className="nav__item">
+                Login/Sign up
+              </Link>
+            </li>
+          </ul>
+          
+        </nav>
+      </header>
+
+      <div>
+        <Switch>
+          <Route>
+            <Route exact path="/login" component={Login}></Route>
+          </Route>
+        </Switch>
+      </div>
     </div>
+    </BrowserRouter>
   );
 }
 
