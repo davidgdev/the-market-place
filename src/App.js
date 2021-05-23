@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './sass/App.scss';
 
-import HorizontalCard from './components/HorizontalCard.jsx';
+import SellerProductList from './components/SellerProductList.jsx';
+import CategoryProductList from './components/CategoryProductList.jsx';
 
 function App() {
   return (
@@ -20,9 +21,13 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1>PRUEBA DEL PULL REQUEST DEPLOY</h1>
-      <HorizontalCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                It has 100 blank pages to be filled with your stories." price="10.00" quantity="5"/>
+      <h2>Seller Products</h2>
+      <SellerProductList products="" btn_text_1="Edit" btn_text_2="Delete"/>
+      
+      <br/>
+      
+      <h2>Category Products</h2>
+      <CategoryProductList products="" btn_text_1="View" btn_text_2="Buy"/>
     </div>
   );
 }

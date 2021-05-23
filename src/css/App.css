@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+.btn {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  margin: 0.2rem 0.5rem;
+  min-width: 5rem;
+}
+.btn:focus {
+  border: 2px solid rgba(181, 170, 153, 0.4);
+}
+.btn-primary {
+  background-color: #FDBD10;
+}
+.btn-secondary {
+  background-color: #000000;
+}
+
 .hcard {
   display: flex;
   align-items: center;
@@ -11,6 +31,7 @@
   border-radius: 1rem;
   min-width: 320px;
   max-width: 600px;
+  margin: 1rem auto;
 }
 .hcard__image {
   margin: 1rem;
@@ -38,8 +59,14 @@
 .hcard__property {
   font-weight: bold;
 }
+.hcard__price {
+  font-size: 1.2rem;
+}
 .hcard__details {
   width: 50%;
+}
+.hcard__details--hidden {
+  display: none;
 }
 .hcard__buttons {
   display: flex;
@@ -56,26 +83,6 @@
     text-align: center;
   }
 }
-.btn {
-  color: white;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 0.6rem;
-  padding: 0.4rem 1.1rem;
-  margin: 0.2rem 0.5rem;
-  min-width: 5rem;
-}
-.btn:focus {
-  border: 2px solid rgba(181, 170, 153, 0.4);
-}
-.btn-primary {
-  background-color: #FDBD10;
-}
-.btn-secondary {
-  background-color: #000000;
-}
-
 .App {
   text-align: center;
 }
