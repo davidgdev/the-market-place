@@ -7,13 +7,21 @@
     width: 240px;
     height: 316px;
     border-radius: 1rem;
-    background-color: $primary;
+    // margin-right: 1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(black, 0.25);
 
+    &:nth-of-type(odd) {
+        background-color: $primary;
+    }
+    &:nth-of-type(even) {
+        background-color: $light-brown;
+    }
     &-image {
         margin: 0rem auto .4rem auto;
         width: 10rem;
         height: 10rem;
         border-radius: 0.5rem;
+        box-shadow: 0 .5rem 1rem rgba(black, 0.25);
     }
     &-info {
         padding: 0 1rem;

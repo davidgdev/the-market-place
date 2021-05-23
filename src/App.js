@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './sass/App.scss';
 
-import FeaturedProductCard from './components/FeaturedProductCard.jsx';
+import FeaturedProducts from './components/FeaturedProducts';
 
 function App() {
   return (
@@ -20,8 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <FeaturedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                It has 100 blank pages to be filled with your stories." price="10.00" quantity="5"/>
+      <FeaturedProducts />
     </div>
   );
 }

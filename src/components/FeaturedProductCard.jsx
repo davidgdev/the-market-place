@@ -4,7 +4,7 @@ import image from '../assets/dummy.png';
 
 import ProductButton from './ProductButton';
 
-function HorizontalCard ({title, price}) {
+function FeatureProductCard ({title, price}) {
     return (
      <article className="featured__card">
          <img className="featured__card-image" src={image} alt={title} />
@@ -24,4 +24,4 @@ function HorizontalCard ({title, price}) {
     )
 };
 
-export default HorizontalCard;
+export default FeatureProductCard;
