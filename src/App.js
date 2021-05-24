@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './sass/App.scss';
 
-import FeaturedProducts from './components/FeaturedProducts';
+import RelatedProducts from './components/RelatedProducts';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <FeaturedProducts />
+      <RelatedProducts />
     </div>
   );
 }
