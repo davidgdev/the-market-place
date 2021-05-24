@@ -1,6 +1,6 @@
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import Login from '../src/components/Login';
 import './sass/App.scss';
-
 
 function App() {
   return (
