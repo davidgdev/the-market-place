@@ -7,9 +7,10 @@
     border-radius: 1rem;
     min-width: 320px;
     max-width: 600px;
+    margin: 1rem auto;
 
     &__image {
-        margin: 1rem;
+        margin: 2rem;
         height: 10rem;
         border-radius: .5rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -40,8 +41,16 @@
         font-weight: bold;
     }
 
+    &__price {
+        font-size: 1.2rem;
+    }
+
     &__details {
         width: 50%;
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__buttons {
