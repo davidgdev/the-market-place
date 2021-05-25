@@ -7,7 +7,7 @@
     border-radius: 1rem;
     min-width: 320px;
     max-width: 600px;
-    margin: auto;
+    margin: 1rem auto;
 
     &__image {
         margin: 2rem;
@@ -41,8 +41,16 @@
         font-weight: bold;
     }
 
+    &__price {
+        font-size: 1.2rem;
+    }
+
     &__details {
         width: 50%;
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__buttons {
