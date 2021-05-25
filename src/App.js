@@ -1,5 +1,7 @@
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Login from '../src/components/Login';
+import logo from '../src/assets/logo.svg';
+import './sass/components/_NavBar.scss';
 import './sass/App.scss';
 
 function App() {
@@ -13,9 +15,9 @@ function App() {
               <Link to="/" className="">
                 <h1>
                   <span className="nav__title-black">Market</span>
-                  <span className="nav__title-white">Place</span>
+                  <span className="nav__title-yellow">Place</span>
+                  <img className="nav__logo" src={logo} alt="Logo cart shopping"></img>
                 </h1>
-                <img className="nav__logo" src="" alt="Logo cart shopping"></img>
               </Link>
             </li>
             <li>
