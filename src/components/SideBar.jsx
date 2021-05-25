@@ -1,6 +1,6 @@
 import React from 'react';
 import '../sass/components/_SideBar.scss';
-import logo from '../assets/logo.svg'
+import logo from '../assets/img/logo.svg'
 
 function SideBar(){
     return (
