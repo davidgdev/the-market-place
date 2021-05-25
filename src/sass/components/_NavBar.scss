@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+
+a{
+    text-decoration: none;
+}
+.nav{
+    padding:25px;
+    font-family: $lato;
+    ul{
+        display: grid;
+        grid-template-columns: 67% 8% 12% 12%;
+        justify-content: space-between;
+
+        li{
+            list-style: none;
+        }
+    }
+    &__title{
+        
+        font-style: normal;
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 65px;
+        letter-spacing: 0.07em;
+        &-black{
+            color:$secondary
+        }
+        &-yellow{
+            color:$primary
+        }
+    }
+    &__logo{
+        width: 25px;
+    }
+    &__item{
+        
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        color: #000000;
+    }
+}
