@@ -1,7 +1,8 @@
 import React from 'react';
 import '../sass/components/_NavBar.scss';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import Login from '../components/Login';
+import Login from './Login';
+import Signup from './Signup';
 import logo from '../assets/img/logo.svg';
 
 
@@ -42,10 +43,9 @@ function NavBar(){
           </header>
     
           <div>
-            <Switch>
-              <Route>
-                <Route exact path="/login" component={Login}></Route>
-              </Route>
+            <Switch> 
+              <Route exact path="/login" component={Login}></Route>
+              <Route exact path="/signup" component={Signup}></Route>
             </Switch>
           </div>
         </div>

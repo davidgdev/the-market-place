@@ -1,27 +1,13 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.form__input{
-    @include input;
-}
-.form__label{
-    @include label;
-    font-size: 18px;
-}
-.form__button{
-    @include button;
-}
 
 .login{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap:20px;
+    @include form; 
+    gap: 20px;
 
     &__form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include form;
         gap:12px;
     }
 
