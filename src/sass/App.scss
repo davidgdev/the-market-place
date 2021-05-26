@@ -10,6 +10,7 @@
 @import "components/_ProductButton";
 @import "components/_ProductListCard";
 @import "components/_ProductList";
+@import "components/_SideFilter";
 
 // Layout
 
@@ -18,6 +19,7 @@
 
 
 // Pages
+@import "pages/_Category";
 
 .App {
     text-align: center;

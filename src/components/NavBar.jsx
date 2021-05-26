@@ -4,6 +4,9 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Login from '../components/Login';
 import logo from '../assets/img/logo.svg';
 
+import SellerProducts from '../pages/SellerProducts';
+import Category from '../pages/Category';
+
 
 function NavBar(){
     return (
@@ -32,6 +35,11 @@ function NavBar(){
                   </Link>
                 </li>
                 <li>
+                  <Link to="/seller" className="nav__item">
+                    My Products
+                  </Link>
+                </li>
+                <li>
                   <Link to="/login" className="nav__item">
                     Login/Sign up
                   </Link>
@@ -43,9 +51,9 @@ function NavBar(){
     
           <div>
             <Switch>
-              <Route>
                 <Route exact path="/login" component={Login}></Route>
-              </Route>
+                <Route exact path="/seller" component={SellerProducts}></Route>
+                <Route exact path="/categories" component={Category}></Route>
             </Switch>
           </div>
         </div>
