@@ -44,12 +44,7 @@ function NavBar(){
                 </li>
                 <li>
                   <Link to="/login" className="nav__item">
-                    Login
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/signup" className="nav__item">
-                    Sign up
+                    Login/Signup
                   </Link>
                 </li>
               </ul>
