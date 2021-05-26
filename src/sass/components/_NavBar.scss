@@ -1,22 +1,25 @@
 @import '../abstracts/variables';
 
-a{
+a {
     text-decoration: none;
 }
-.nav{
+.nav {
     padding:25px;
     font-family: $lato;
-    ul{
-        display: grid;
-        grid-template-columns: 67% 8% 12% 12%;
-        justify-content: space-between;
+    display: flex;
 
-        li{
-            list-style: none;
-        }
+    &__brand{
+        display: flex;
+        list-style: none; 
     }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+    }
+
     &__title{
-        
         font-style: normal;
         font-weight: bold;
         font-size: 54px;
@@ -33,10 +36,10 @@ a{
         width: 25px;
     }
     &__item{
-        
         font-style: normal;
         font-weight: 900;
         font-size: 20px;
         color: #000000;
+        padding: 0 1rem;
     }
 }

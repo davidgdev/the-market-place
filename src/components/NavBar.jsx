@@ -14,7 +14,7 @@ function NavBar(){
           <div>
           <header className="header">
             <nav className="nav">
-              <ul>
+              <ul className="nav__brand">
                 <li>
                   <Link to="/" className="">
                     <h1>
@@ -24,6 +24,8 @@ function NavBar(){
                     </h1>
                   </Link>
                 </li>
+              </ul>
+              <ul className="nav__links">
                 <li>
                   <Link to="/" className="nav__item">
                     Home
