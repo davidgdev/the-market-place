@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+
+.category {
+    display: flex;
+    justify-content: space-around;
+
+    &__separator {
+
+        width: 1px;
+        border-right: 1px solid $light-brown;
+        margin: 2rem;
+    }
+    
+}
