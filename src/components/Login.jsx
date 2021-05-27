@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import SideBar from './SideBar';
+import { BrowserRouter, Link } from 'react-router-dom'
 import '../sass/components/_Login.scss';
-import Signup from './Signup';
+
 
 function Login(){
     return(

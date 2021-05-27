@@ -1,4 +1,5 @@
 import React from 'react';
+import '../sass/components/_UploadProduct.scss';
 
 function UploadProduct(){
     return (
@@ -20,8 +21,10 @@ function UploadProduct(){
             <label className="form__label">description</label>
             <textarea id="description" name="description" className="form__input" rows="4" cols="50"></textarea>
             
-            <button className="form__button">upload image</button>
-            <input id="image" type="file" className="form__input"/>
+            <div className="form__images">
+                <button className="form__button button-upload">upload image</button>
+                <input id="image" type="file" className="form__input-upload"/>
+            </div>
 
             <button type="submit" className="form__button">upload product</button>
         </form>

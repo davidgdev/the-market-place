@@ -25,6 +25,10 @@
 .form__input{
   @include input;
 }
+.form__input-upload{
+  @include input;
+  width: 250px;
+}
 .form__label{
   @include label;
   font-size: 18px;
