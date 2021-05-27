@@ -1,9 +1,9 @@
 import './sass/App.scss';
-import NavBar from '../src/components/NavBar'
+import Product from './pages/Product'
 
 function App() {
   return(
-    <NavBar />
+    <Product />
   )
 }
 
