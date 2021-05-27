@@ -4,10 +4,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
 }
 
 .btn {
@@ -89,6 +101,37 @@
     text-align: center;
   }
 }
+.sideFilter {
+  margin: 3rem;
+}
+.sideFilter__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.sideFilter__filterBlock {
+  margin-bottom: 1rem;
+}
+.sideFilter__filterTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.sideFilter__filterOption {
+  font-size: 1rem;
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-around;
+}
+.category__separator {
+  width: 1px;
+  border-right: 1px solid rgba(181, 170, 153, 0.4);
+  margin: 2rem;
+}
+
 .App {
   text-align: center;
 }

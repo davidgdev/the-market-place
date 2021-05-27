@@ -1,8 +1,12 @@
 import React from 'react';
 import '../sass/components/_NavBar.scss';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import Login from '../components/Login';
+import Login from './Login';
+import Signup from './Signup';
 import logo from '../assets/img/logo.svg';
+
+import SellerProducts from '../pages/SellerProducts';
+import Category from '../pages/Category';
 
 
 function NavBar(){
@@ -11,7 +15,7 @@ function NavBar(){
           <div>
           <header className="header">
             <nav className="nav">
-              <ul>
+              <ul className="nav__brand">
                 <li>
                   <Link to="/" className="">
                     <h1>
@@ -21,6 +25,8 @@ function NavBar(){
                     </h1>
                   </Link>
                 </li>
+              </ul>
+              <ul className="nav__links">
                 <li>
                   <Link to="/" className="nav__item">
                     Home
@@ -32,8 +38,13 @@ function NavBar(){
                   </Link>
                 </li>
                 <li>
+                  <Link to="/seller" className="nav__item">
+                    My Products
+                  </Link>
+                </li>
+                <li>
                   <Link to="/login" className="nav__item">
-                    Login/Sign up
+                    Login/Signup
                   </Link>
                 </li>
               </ul>
@@ -43,9 +54,10 @@ function NavBar(){
     
           <div>
             <Switch>
-              <Route>
-                <Route exact path="/login" component={Login}></Route>
-              </Route>
+              <Route exact path="/login" component={Login}></Route>
+              <Route exact path="/seller" component={SellerProducts}></Route>
+              <Route exact path="/categories" component={Category}></Route>
+              <Route exact path="/signup" component={Signup}></Route>
             </Switch>
           </div>
         </div>

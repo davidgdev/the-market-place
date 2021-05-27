@@ -10,6 +10,7 @@
 @import "components/_ProductButton";
 @import "components/_ProductListCard";
 @import "components/_ProductList";
+@import "components/_SideFilter";
 
 // Layout
 
@@ -18,6 +19,23 @@
 
 
 // Pages
+@import "pages/_Category";
+
+// Forms
+.form__input{
+  @include input;
+}
+.form__label{
+  @include label;
+  font-size: 18px;
+}
+.form__button{
+  @include button;
+}
+
+.form__input-check{
+  @include input-check;
+}
 
 .App {
     text-align: center;
