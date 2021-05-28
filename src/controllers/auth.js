@@ -98,19 +98,23 @@ exports.register = (req, res) => {
                 console.log(error);
             } else {
                 console.log(results);
+                const newRol = [];
                 const id_user=results.insertId;
-                console.log("prueba:"+id_user)
+                
+                let _rol_id=rol_id.forEach(rol_id => {
+                    db.query('INSERT INTO users_rols SET ?',{rol_u_r_fk:rol_id,user_r_fk:id_user},(error,results) => {
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            console.log("dato insertado tabla users_rols");                           
+                        } 
+                       
+                    });               
+                });
 
-                db.query('INSERT INTO users_rols SET ?',{rol_u_r_fk:rol_id,user_r_fk:id_user},(error,results) => {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        console.log("se logro");
-                        return res.json({
-                            "status": 200,
-                            "message:": 'User registered',
-                        });
-                    } 
+                return res.json({
+                    "status": 200,
+                    "message:": 'User registered',
                 });
                 
             }
