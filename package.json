@@ -1,38 +1,45 @@
 {
   "name": "the-market-place",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "services for the marketplace project made in node js.",
+  "main": "index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "@babel/polyfill": "^7.12.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.0",
+    "nodemon": "^2.0.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": " mocha tests/api.test.js  --exit",
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon src/app.js --exec babel-node",
+    "start": "node dist/app.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbejaCruz/the-market-place.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "keywords": [
+    "node js",
+    "services",
+    "marketplace"
+  ],
+  "author": "Diego Cruz dacruzt@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbejaCruz/the-market-place/issues"
+  },
+  "homepage": "https://github.com/AbejaCruz/the-market-place#readme"
 }
