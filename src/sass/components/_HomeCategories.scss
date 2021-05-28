@@ -20,7 +20,13 @@
         text-align: center;
         padding-top: 1.5rem;
         margin-bottom: 1.5rem;
-        box-shadow: 0 .5rem .5rem rgba(black, 0.2);
+        box-shadow: 0 .5rem .5rem rgba($secondary, 0.2);
+        &-link {
+            text-decoration: none;
+        }
+        &-link:visited {
+            color: $secondary;
+        }
         &:nth-of-type(odd) {
             background-color: $light-brown;
         }

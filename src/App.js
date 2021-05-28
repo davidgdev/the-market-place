@@ -1,9 +1,9 @@
 import './sass/App.scss';
-import Home from '../src/pages/Home'
+import NavBar from '../src/components/NavBar'
 
 function App() {
   return(
-    <Home />
+    <NavBar />
   )
 }
 
