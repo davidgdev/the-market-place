@@ -1,0 +1,22 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+
+.login{
+    @include form; 
+    gap: 20px;
+
+    &__form{
+        @include form;
+        gap:12px;
+    }
+
+    &__password, &__signup{
+        font-family: $lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: $secondary;
+    }
+    
+}

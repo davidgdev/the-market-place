@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  margin: 0.2rem 0.5rem;
+  min-width: 5rem;
+}
+.btn:focus {
+  border: 2px solid rgba(181, 170, 153, 0.4);
+}
+.btn-primary {
+  background-color: #FDBD10;
+}
+.btn-secondary {
+  background-color: #000000;
+}
+
+.hcard {
+  display: flex;
+  align-items: center;
+  background-color: rgba(181, 170, 153, 0.4);
+  border-radius: 1rem;
+  min-width: 320px;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.hcard__image {
+  margin: 2rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.hcard__info {
+  flex-direction: column;
+  margin: 1rem;
+  text-align: left;
+}
+.hcard__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.hcard__description {
+  margin: 0.5rem 0;
+}
+.hcard__info-bottom {
+  display: flex;
+  align-items: center;
+}
+.hcard__property {
+  font-weight: bold;
+}
+.hcard__price {
+  font-size: 1.2rem;
+}
+.hcard__details {
+  width: 50%;
+}
+.hcard__details--hidden {
+  display: none;
+}
+.hcard__buttons {
+  display: flex;
+  justify-content: right;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .hcard {
+    flex-direction: column;
+  }
+
+  .hcard__info {
+    text-align: center;
+  }
+}
+.sideFilter {
+  margin: 3rem;
+}
+.sideFilter__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.sideFilter__filterBlock {
+  margin-bottom: 1rem;
+}
+.sideFilter__filterTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.sideFilter__filterOption {
+  font-size: 1rem;
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.featured__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.featured__card-image {
+  margin: 0rem auto 0.4rem auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.featured__card-info {
+  padding: 0 1rem;
+  text-align: left;
+}
+.featured__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.featured__card-info-details {
+  font-size: 1.5rem;
+}
+.featured__card-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.odd {
+  background-color: rgba(181, 170, 153, 0.4);
+}
+
+.even {
+  background-color: #FDBD10;
+}
+
+.featured_products-container {
+  padding: 2rem 2rem;
+}
+.featured_products-container h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.carousel__inner-slide {
+  width: calc(100% - 2rem);
+  height: calc(100% - 1.5rem);
+}
+
+.carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.4rem;
+  background-color: black;
+  border: none;
+  border-radius: 1rem;
+}
+
+.home_categories {
+  width: 100%;
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home_categories h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.home_categories .category__card {
+  width: 240px;
+  height: 316px;
+  border-radius: 1rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.home_categories .category__card-link {
+  text-decoration: none;
+  color: #000000;
+}
+.home_categories .category__card-link:visited {
+  color: #000000;
+}
+.home_categories .category__card:nth-of-type(odd) {
+  background-color: rgba(181, 170, 153, 0.4);
+}
+.home_categories .category__card:nth-of-type(even) {
+  background-color: #FDBD10;
+}
+.home_categories .category__card-image {
+  width: 80%;
+}
+.home_categories .category__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (max-width: 534px) {
+  .home_categories .category__card {
+    width: 100%;
+    height: 316px;
+  }
+  .home_categories .category__card-image {
+    width: 50%;
+  }
+  .home_categories .category__card-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.related_products-container {
+  margin: 2rem 2rem;
+}
+.related_products-container h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.carousel__inner-slide {
+  width: calc(100% - 2rem);
+  height: calc(100% - 1.5rem);
+}
+
+.carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.4rem;
+  background-color: black;
+  border: none;
+  border-radius: 1rem;
+}
+
+.related__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.related__card-image {
+  margin: 0rem auto 0.4rem auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.related__card-info {
+  padding: 0 1rem;
+  text-align: left;
+}
+.related__card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.related__card-info-details {
+  font-size: 1.5rem;
+}
+.related__card-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.odd {
+  background-color: rgba(181, 170, 153, 0.4);
+}
+
+.even {
+  background-color: #FDBD10;
+}
+
+.category {
+  display: flex;
+  justify-content: space-around;
+}
+.category__separator {
+  width: 1px;
+  border-right: 1px solid rgba(181, 170, 153, 0.4);
+  margin: 2rem;
+}
+
+.home-banner {
+  width: 96%;
+  height: 350px;
+  margin: 0 auto;
+  background-color: rgba(181, 170, 153, 0.4);
+  background-image: url("../../assets/img/home-banner-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 1rem;
+}
+.home-banner p {
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  font-weight: medium;
+  padding: 2rem 5rem;
+  letter-spacing: 0.4rem;
+}
+.home-banner p span {
+  margin-left: 4rem;
+}
+@media (max-width: 768px) {
+  .home-banner p {
+    padding: 5rem 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.form__input {
+  background: #F2F2F2;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 336px;
+  height: 45px;
+}
+
+.form__input-upload {
+  background: #F2F2F2;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 336px;
+  height: 45px;
+  width: 250px;
+}
+
+.form__label {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.form__button {
+  width: 75px;
+  height: 45px;
+  background: #FDBD10;
+  color: #FFFFFF;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.form__input-check {
+  height: 25px;
+  width: 25px;
+  margin-right: 23px;
+  background-color: #eee;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

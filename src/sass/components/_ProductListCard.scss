@@ -1,0 +1,70 @@
+@import '../abstracts/variables';
+
+.hcard {
+    display: flex;
+    align-items: center;
+    background-color: $light-brown;
+    border-radius: 1rem;
+    min-width: 320px;
+    max-width: 600px;
+    margin: 1rem auto;
+
+    &__image {
+        margin: 2rem;
+        height: 10rem;
+        border-radius: .5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    &__info {
+        flex-direction: column;
+        margin: 1rem;
+        text-align: left;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+
+    &__description {
+        margin: 0.5rem 0;
+    }
+
+    &__info-bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    &__property {
+        font-weight: bold;
+    }
+
+    &__price {
+        font-size: 1.2rem;
+    }
+
+    &__details {
+        width: 50%;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: right;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .hcard {
+        flex-direction: column;
+    }
+    .hcard__info {
+        text-align: center;
+    }
+}

@@ -1,0 +1,37 @@
+@import '../abstracts/variables';
+
+.sideBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $primary;
+    width: 30%;
+    height: 100vh;
+    &__logo{
+        width: 173px;
+    }
+    &__title{
+        font-family: $lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 65px;
+        letter-spacing: 0.07em;
+        &-black{
+            color:$secondary
+        }
+        &-white{
+            color:$third
+        }
+    }
+    &__subtitle{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: 0.17em;
+    }
+
+}
