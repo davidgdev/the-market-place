@@ -7,6 +7,7 @@ import logo from '../assets/img/logo.svg';
 
 import SellerProducts from '../pages/SellerProducts';
 import Category from '../pages/Category';
+import Product from '../pages/Product';
 import Home from '../pages/Home';
 
 
@@ -59,6 +60,7 @@ function NavBar(){
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/seller" component={SellerProducts}></Route>
               <Route exact path="/categories" component={Category}></Route>
+              <Route exact path="/products" component={Product}></Route>
               <Route exact path="/signup" component={Signup}></Route>
             </Switch>
           </div>

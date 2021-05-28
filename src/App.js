@@ -3,7 +3,7 @@ import NavBar from '../src/components/NavBar'
 
 function App() {
   return(
-    <Product />
+    <NavBar />
   )
 }
 

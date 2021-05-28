@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import '../sass/components/_FeaturedProductCard.scss';
 import image from '../assets/dummy.png';
 
@@ -16,7 +18,9 @@ function FeatureProductCard ({title, price, index}) {
                     <p>${price}</p>
                 </div>
                 <div className="featured__card-button">
-                    <ProductButton text="Buy Now" style="btn btn-secondary"/>
+                    <Link to="/products">
+                        <ProductButton text="Buy Now" style="btn btn-secondary"/>        
+                    </Link>
                 </div>
             </div>
          </div>
