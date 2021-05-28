@@ -1,7 +1,7 @@
 import React from 'react';
 import '../sass/components/_UploadProduct.scss';
 
-function UploadProduct(){
+function UpdateProduct(){
     return (
         <form className="product__form">
             <label className="form__label">product name</label>
@@ -11,7 +11,7 @@ function UploadProduct(){
 
             <label className="form__label">category</label>
             <select name="categories" id="categories" className="form__input">
-                <option value="#">Select Category</option>
+            <option value="#">Select Category</option>
                 <option value="Technology">Technology</option>
                 <option value="Clothing">Clothing</option>
                 <option value="Fitness">Fitness</option>
@@ -28,9 +28,9 @@ function UploadProduct(){
                 <input id="image" type="file" className="form__input-upload"/>
             </div>
 
-            <button type="submit" className="form__button">upload product</button>
+            <button type="submit" className="form__button">update product</button>
         </form>
     );
 }
 
-export default UploadProduct;
+export default UpdateProduct;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../sass/components/_Login.scss';
 
 
@@ -16,10 +16,10 @@ function Login(){
                 <button type="submit" className="form__button">go shopping</button>
             </form>
 
-            <BrowserRouter>
+            
                 <Link to="/" className="login__password">Forgot password?</Link>
                 <Link to="/signup" className="login__signup">Create account</Link>
-            </BrowserRouter>
+            
 
         </section>
     )
