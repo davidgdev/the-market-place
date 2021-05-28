@@ -23,6 +23,7 @@
         box-shadow: 0 .5rem .5rem rgba($secondary, 0.2);
         &-link {
             text-decoration: none;
+            color: $secondary;
         }
         &-link:visited {
             color: $secondary;
