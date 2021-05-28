@@ -41,7 +41,7 @@ class RelatedProducts extends Component {
             >
                 <h2>Related Products</h2>
                   <CarouselProvider 
-                    isPlaying= 'true'
+                    isPlaying= 'false'
                     naturalSlideWidth={CARD_WIDTH}
                     naturalSlideHeight={340}
                     totalSlides={5}
@@ -70,7 +70,6 @@ class RelatedProducts extends Component {
                       It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" index="4" />
                       </Slide>
                     </Slider>
-                    <DotGroup />
                   </CarouselProvider>
             </section>
         );
