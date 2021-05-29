@@ -32,6 +32,7 @@ db.getConnection( (error) => {
 })
 
 app.use('/auth', require('./routes/auth'));
+app.use('/rol', require('./routes/rol'));
 
 app.listen(port, () => {
   console.log(`Server started on Port ${port}`);
