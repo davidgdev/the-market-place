@@ -11,6 +11,11 @@
 @import "components/_ProductListCard";
 @import "components/_ProductList";
 @import "components/_SideFilter";
+@import "components/_FeaturedProductCard";
+@import "components/_FeaturedProducts";
+@import "components/_HomeCategories";
+@import "components/_RelatedProducts";
+@import "components/_RelatedProductCard";
 
 // Layout
 
@@ -20,6 +25,7 @@
 
 // Pages
 @import "pages/_Category";
+@import "pages/Home";
 
 // Forms
 .form__input{

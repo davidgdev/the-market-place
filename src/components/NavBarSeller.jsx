@@ -1,12 +1,13 @@
 import React from 'react';
 import '../sass/components/_NavBar.scss';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import LoginForm from './LoginForm';
-
-
 
 import SellerProducts from '../pages/SellerProducts';
+import SellerProductsUpload from '../pages/SellerProductsUpload';
+import SellerProductsUpdate from '../pages/SellerProductsUpdate';
 import Category from '../pages/Category';
+import Product from '../pages/Product';
+import Home from '../pages/Home';
 
 
 function NavBar(){
@@ -40,8 +41,12 @@ function NavBar(){
       </nav>
 
       <Switch>
+          <Route exact path="/" component={Home}></Route>
           <Route exact path="/seller" component={SellerProducts}></Route>
           <Route exact path="/categories" component={Category}></Route>
+          <Route exact path="/products" component={Product}></Route>
+          <Route exact path="/upload" component={SellerProductsUpload}></Route>
+          <Route exact path="/update" component={SellerProductsUpdate}></Route>
       </Switch>
     </BrowserRouter>
       );

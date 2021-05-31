@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 import Login from '../pages/Login';
 import Category from '../pages/Category';
+import Home from '../pages/Home';
 
 
 function NavBar(){
@@ -32,6 +33,7 @@ function NavBar(){
           </nav>
 
           <Switch>
+              <Route exact path="/" component={Home}></Route>
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/categories" component={Category}></Route>
           </Switch>
