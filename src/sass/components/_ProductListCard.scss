@@ -60,9 +60,10 @@
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:600px) {
     .hcard {
         flex-direction: column;
+        margin: 1rem;
     }
     .hcard__info {
         text-align: center;

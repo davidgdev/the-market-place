@@ -7,7 +7,6 @@ import SideFilter from '../components/SideFilter';
 function Category () {
     
     const { cat } = useParams();
-    const [category, setCategory] = useState(cat);
     const [products, setProducts] = useState([]);
 
     useEffect (()=>{
@@ -27,9 +26,9 @@ function Category () {
     }
 
     return (
-        <main className="category">
-            <SideFilter title={category}/>
-            <div className="category__separator"/>
+        <main className="category grid">
+            <SideFilter title={cat}/>
+            <div id="separator" className="category__separator"/>
             <CategoryProductList products={products} btn_text_1="View" btn_text_2="Buy"/>
         </main>
     )  

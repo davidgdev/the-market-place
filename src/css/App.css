@@ -24,6 +24,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -104,9 +106,10 @@ body {
   margin-left: auto;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .hcard {
     flex-direction: column;
+    margin: 1rem;
   }
 
   .hcard__info {
@@ -322,6 +325,7 @@ body {
 .category {
   display: flex;
   justify-content: space-around;
+  min-width: 320px;
   max-width: 1440px;
   margin: auto;
 }
@@ -336,6 +340,51 @@ body {
   justify-content: center;
   margin: auto;
   max-width: 1440px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "filter separator list";
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 1fr 8fr;
+  grid-column-gap: 10px;
+}
+
+#side-filter {
+  grid-area: "filter";
+}
+
+#seller-list {
+  grid-area: "list";
+}
+
+#separator {
+  grid-area: "separator";
+}
+
+@media all and (max-width: 800px) {
+  .grid {
+    grid-template-areas: "filter" "list";
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  #side-filter {
+    margin: auto;
+  }
+
+  #separator {
+    display: none;
+  }
+}
+.seller {
+  display: flex;
+  justify-content: space-around;
+}
+.seller__separator {
+  width: 1px;
+  border-right: 1px solid rgba(181, 170, 153, 0.4);
+  margin: 2rem;
 }
 
 .home-banner {

@@ -3,7 +3,7 @@ import '../sass/components/_SideFilter.scss';
 
 function SideFilter({title}){
     return (
-      <section className="sideFilter">
+      <section id="side-filter" className="sideFilter">
         <h1 className="sideFilter__title">{title}</h1>
         <p className="sideFilter__filterTitle">Price</p>
         <ul className="sideFilter__filterBlock">

@@ -5,7 +5,7 @@ import ProductListCard from './ProductListCard';
 
 function CategoryProductList ({products, btn_text_1, btn_text_2}) {
     return (
-     <section className="sellerList">
+     <section id="seller-list" className="sellerList">
         {
             products.map((item) => 
                 <ProductListCard key={item.id} title={`${item.name} -(${item.category})`} description={item.description} price={item.price}
