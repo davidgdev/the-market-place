@@ -17,15 +17,23 @@ exports.login = async (req, res) => {
         } = req.body;
 
         if (!email || !password) {
-            return res.status(400).res.send("Please provide an email and password");
+            return res.status(400).res.json({
+                "error": {
+                    "message": 'Please provide an email and password'
+                }
+            });
         }
 
         db.query('SELECT * FROM users WHERE email = ?', [email], async (error, results) => {
-            console.log(results);
+
             if (!results || !(await bcrypt.compare(password, results[0].password))) {
-                res.status(401).send('Email or Password is incorrect');
+                res.status(401).json({
+                    "error": {
+                        "message": 'Email or Password is incorrect'
+                    }
+                });
             } else {
-                const id = results[0].id;
+                const id = results[0].id_u;
                 const token = jwt.sign({
                     id
                 }, process.env.JWT_SECRET, {
@@ -40,17 +48,16 @@ exports.login = async (req, res) => {
                     ),
                     httpOnly: true
                 }
-
                 res.cookie('jwt', token, cookieOptions);
-                //res.status(200).redirect("/");
-                res.status(401).json({
+                res.status(200).json({
                     "status": 200,
                     "message:": 'User Login',
+                    "id": id,
                     "token": token,
                 });
             }
 
-        })
+        });
 
     } catch (error) {
         console.log(error);
@@ -82,7 +89,11 @@ exports.register = (req, res) => {
             });
 
         } else if (password !== passwordConfirm) {
-            return res.send('Passwords do not match')
+            return res.json({
+                "error": {
+                    "message": 'Passwords do not match'
+                }
+            });
         }
 
         let hashedPassword = await bcrypt.hash(password, 8);
@@ -99,27 +110,31 @@ exports.register = (req, res) => {
             } else {
                 console.log(results);
                 const newRol = [];
-                const id_user=results.insertId;
-                
-                let _rol_id=rol_id.forEach(rol_id => {
-                    db.query('INSERT INTO users_rols SET ?',{rol_u_r_fk:rol_id,user_r_fk:id_user},(error,results) => {
+                const id_user = results.insertId;
+
+                let _rol_id = rol_id.forEach(rol_id => {
+                    db.query('INSERT INTO users_rols SET ?', {
+                        rol_u_r_fk: rol_id,
+                        user_r_fk: id_user
+                    }, (error, results) => {
                         if (error) {
                             console.log(error);
                         } else {
-                            console.log("dato insertado tabla users_rols");                           
-                        } 
-                       
-                    });               
+                            console.log("dato insertado tabla users_rols");
+                        }
+
+                    });
                 });
 
                 return res.json({
                     "status": 200,
                     "message:": 'User registered',
                 });
-                
+
             }
-        })
+        });
 
     });
 
 }
+
