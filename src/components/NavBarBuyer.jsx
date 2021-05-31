@@ -5,7 +5,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Category from '../pages/Category';
 
 
-function NavBar(){
+function NavBarBuyer(){
     return (
       <BrowserRouter>
 
@@ -37,4 +37,4 @@ function NavBar(){
       );
 }
 
-export default NavBar;
+export default NavBarBuyer

@@ -33,7 +33,7 @@ function NavBar(){
           </nav>
 
           <Switch>
-              <Route exact path="/" component={Home}></Route>
+            
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/categories" component={Category}></Route>
           </Switch>

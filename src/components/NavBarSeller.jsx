@@ -10,7 +10,7 @@ import Product from '../pages/Product';
 import Home from '../pages/Home';
 
 
-function NavBar(){
+function NavBarSeller(){
     return (
       <BrowserRouter>
 
@@ -52,4 +52,4 @@ function NavBar(){
       );
 }
 
-export default NavBar;
+export default NavBarSeller;
