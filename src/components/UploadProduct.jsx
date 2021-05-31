@@ -3,7 +3,7 @@ import '../sass/components/_UploadProduct.scss';
 
 function UploadProduct(){
     return (
-        <form className="product__form">
+        <form id="product-form" className="product__form">
             <label className="form__label">product name</label>
             <input id="prod-name" type="text" className="form__input"/>
             <label className="form__label">price</label>

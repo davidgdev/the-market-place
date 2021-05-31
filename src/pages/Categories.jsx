@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sass/pages/_Category.scss';
+import '../sass/pages/_ProductList.scss';
 
 import HomeCategories from '../components/HomeCategories';
 

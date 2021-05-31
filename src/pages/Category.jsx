@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import '../sass/pages/_Category.scss';
+import '../sass/pages/_ProductList.scss';
 import CategoryProductList from '../components/CategoryProductList';
 import SideFilter from '../components/SideFilter';
 

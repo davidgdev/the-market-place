@@ -344,17 +344,17 @@ body {
 
 .grid {
   display: grid;
-  grid-template-areas: "filter separator list";
+  grid-template-areas: "side separator list";
   grid-template-rows: 1fr;
   grid-template-columns: 3fr 1fr 8fr;
   grid-column-gap: 10px;
 }
 
 #side-filter {
-  grid-area: "filter";
+  grid-area: "side";
 }
 
-#seller-list {
+#product-list {
   grid-area: "list";
 }
 
@@ -364,7 +364,7 @@ body {
 
 @media all and (max-width: 800px) {
   .grid {
-    grid-template-areas: "filter" "list";
+    grid-template-areas: "side" "list";
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
   }
@@ -380,6 +380,9 @@ body {
 .seller {
   display: flex;
   justify-content: space-around;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: auto;
 }
 .seller__separator {
   width: 1px;
@@ -387,6 +390,41 @@ body {
   margin: 2rem;
 }
 
+.grid {
+  display: grid;
+  grid-template-areas: "side separator list";
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 1fr 8fr;
+  grid-column-gap: 10px;
+}
+
+#side-filter {
+  grid-area: "side";
+}
+
+#product-list {
+  grid-area: "list";
+}
+
+#separator {
+  grid-area: "separator";
+}
+
+@media all and (max-width: 800px) {
+  .grid {
+    grid-template-areas: "side" "list";
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  #side-filter {
+    margin: auto;
+  }
+
+  #separator {
+    display: none;
+  }
+}
 .home-banner {
   width: 96%;
   height: 350px;
@@ -424,6 +462,7 @@ body {
   outline: none;
   width: 336px;
   height: 45px;
+  padding: 0.5rem 1rem;
 }
 
 .form__input-upload {
@@ -433,6 +472,7 @@ body {
   outline: none;
   width: 336px;
   height: 45px;
+  padding: 0.5rem 1rem;
   width: 250px;
 }
 
@@ -459,42 +499,4 @@ body {
   width: 25px;
   margin-right: 23px;
   background-color: #eee;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

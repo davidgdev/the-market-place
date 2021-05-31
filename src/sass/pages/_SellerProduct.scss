@@ -1,6 +1,6 @@
 @import '../abstracts/variables';
 
-.category {
+.seller {
     display: flex;
     justify-content: space-around;
     min-width: 320px;
@@ -16,27 +16,20 @@
     
 }
 
-.categories {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: 1440px;
-}
-
 .grid {
     display: grid;
     grid-template-areas: 
-        "filter separator list";
+        "side separator list";
     grid-template-rows: 1fr;  
     grid-template-columns: 3fr 1fr 8fr;
     grid-column-gap: 10px;
 }
 
 #side-filter {
-    grid-area: 'filter';
+    grid-area: 'side';
 }
 
-#seller-list {
+#product-list {
     grid-area: 'list';
 }
 
@@ -47,7 +40,7 @@
 @media all and (max-width: 800px) {
     .grid {
         grid-template-areas: 
-        "filter"
+        "side"
         "list";
         grid-auto-rows: auto;
         grid-template-columns: 1fr;

@@ -4,6 +4,7 @@
 .product__form{
     @include form; 
     gap: 12px;
+    margin: 2rem 0;
 }
 
 .form_images{
