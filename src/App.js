@@ -1,9 +1,14 @@
 import './sass/App.scss';
-import NavBar from '../src/components/NavBar'
+import './pages/Login';
+import Login from './pages/Login';
+
+
 
 function App() {
   return(
-    <NavBar />
+    
+    <Login></Login>
+    
   )
 }
 

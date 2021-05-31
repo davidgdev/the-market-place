@@ -3,11 +3,10 @@
 
 
 .login{
-    @include form; 
-    gap: 20px;
-
+    
     &__form{
         @include form;
+        margin-top: 35px;
         gap:12px;
     }
 

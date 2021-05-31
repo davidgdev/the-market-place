@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+
+.login { 
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav article article"
+    "nav article article";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 30% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    }
+
+.login__title{
+    font-family: $lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;    
+    text-align: center;
+}
+
+
+#login__header{
+    grid-area: header;
+}
+
+#login__side{
+    grid-area: nav;
+}
+
+#login__body{
+    grid-area: article;
+}
+
+
+
+
+
+
