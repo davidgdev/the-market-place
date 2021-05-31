@@ -322,11 +322,20 @@ body {
 .category {
   display: flex;
   justify-content: space-around;
+  max-width: 1440px;
+  margin: auto;
 }
 .category__separator {
   width: 1px;
   border-right: 1px solid rgba(181, 170, 153, 0.4);
   margin: 2rem;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 1440px;
 }
 
 .home-banner {

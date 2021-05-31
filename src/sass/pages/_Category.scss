@@ -3,6 +3,8 @@
 .category {
     display: flex;
     justify-content: space-around;
+    max-width: 1440px;
+    margin: auto;
 
     &__separator {
 
@@ -11,4 +13,11 @@
         margin: 2rem;
     }
     
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 1440px;
 }
