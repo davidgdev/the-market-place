@@ -33,7 +33,11 @@ exports.login = /*#__PURE__*/function () {
               break;
             }
 
-            return _context2.abrupt("return", res.status(400).res.send("Please provide an email and password"));
+            return _context2.abrupt("return", res.status(400).res.json({
+              "error": {
+                "message": 'Please provide an email and password'
+              }
+            }));
 
           case 4:
             db.query('SELECT * FROM users WHERE email = ?', [email], /*#__PURE__*/function () {
@@ -43,32 +47,35 @@ exports.login = /*#__PURE__*/function () {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
-                        console.log(results);
                         _context.t0 = !results;
 
                         if (_context.t0) {
-                          _context.next = 6;
+                          _context.next = 5;
                           break;
                         }
 
-                        _context.next = 5;
+                        _context.next = 4;
                         return bcrypt.compare(password, results[0].password);
 
-                      case 5:
+                      case 4:
                         _context.t0 = !_context.sent;
 
-                      case 6:
+                      case 5:
                         if (!_context.t0) {
-                          _context.next = 10;
+                          _context.next = 9;
                           break;
                         }
 
-                        res.status(401).send('Email or Password is incorrect');
-                        _context.next = 16;
+                        res.status(401).json({
+                          "error": {
+                            "message": 'Email or Password is incorrect'
+                          }
+                        });
+                        _context.next = 15;
                         break;
 
-                      case 10:
-                        id = results[0].id;
+                      case 9:
+                        id = results[0].id_u;
                         token = jwt.sign({
                           id: id
                         }, process.env.JWT_SECRET, {
@@ -79,15 +86,15 @@ exports.login = /*#__PURE__*/function () {
                           expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000),
                           httpOnly: true
                         };
-                        res.cookie('jwt', token, cookieOptions); //res.status(200).redirect("/");
-
-                        res.status(401).json({
+                        res.cookie('jwt', token, cookieOptions);
+                        res.status(200).json({
                           "status": 200,
                           "message:": 'User Login',
+                          "id": id,
                           "token": token
                         });
 
-                      case 16:
+                      case 15:
                       case "end":
                         return _context.stop();
                     }
@@ -127,7 +134,8 @@ exports.register = function (req, res) {
       last_name = _req$body2.last_name,
       email = _req$body2.email,
       password = _req$body2.password,
-      passwordConfirm = _req$body2.passwordConfirm;
+      passwordConfirm = _req$body2.passwordConfirm,
+      rol_id = _req$body2.rol_id;
   db.query('SELECT email FROM users WHERE email = ?', [email], /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(error, results) {
       var hashedPassword;
@@ -156,7 +164,11 @@ exports.register = function (req, res) {
                 break;
               }
 
-              return _context3.abrupt("return", res.send('Passwords do not match'));
+              return _context3.abrupt("return", res.json({
+                "error": {
+                  "message": 'Passwords do not match'
+                }
+              }));
 
             case 7:
               _context3.next = 9;
@@ -175,6 +187,22 @@ exports.register = function (req, res) {
                   console.log(error);
                 } else {
                   console.log(results);
+                  var newRol = [];
+                  var id_user = results.insertId;
+
+                  var _rol_id = rol_id.forEach(function (rol_id) {
+                    db.query('INSERT INTO users_rols SET ?', {
+                      rol_u_r_fk: rol_id,
+                      user_r_fk: id_user
+                    }, function (error, results) {
+                      if (error) {
+                        console.log(error);
+                      } else {
+                        console.log("dato insertado tabla users_rols");
+                      }
+                    });
+                  });
+
                   return res.json({
                     "status": 200,
                     "message:": 'User registered'
