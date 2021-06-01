@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 import '../sass/components/_FeaturedProductCard.scss';
-import image from '../assets/dummy.png';
 
 import ProductButton from './ProductButton';
 
-function FeatureProductCard ({title, price, index}) {
-    const featuredClass = (index % 2 == 0) ? 'even' : 'odd';
+function FeatureProductCard ({title, price, image, index}) {
+    const featuredClass = (index % 2 == 0) ? 'odd' : 'even';
     return (
      <article className={`featured__card ${featuredClass}`} >
-         <img className="featured__card-image" src={image} alt={title} />
+        <Link to="/products">
+            <img className="featured__card-image" src={image} alt={title} />
+        </Link>
          <div className="featured__card-info">
             <p className="featured__card-title">{title}</p>
             <div className="featured__card-info-bottom">
@@ -18,9 +19,7 @@ function FeatureProductCard ({title, price, index}) {
                     <p>${price}</p>
                 </div>
                 <div className="featured__card-button">
-                    <Link to="/products">
-                        <ProductButton text="Buy Now" style="btn btn-secondary"/>        
-                    </Link>
+                    <ProductButton text="Buy Now" style="btn btn-secondary"/>        
                 </div>
             </div>
          </div>

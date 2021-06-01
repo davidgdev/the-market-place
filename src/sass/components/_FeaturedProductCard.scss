@@ -11,6 +11,9 @@
     border-radius: 1rem;
     box-shadow: 0 .5rem 1rem rgba(black, 0.15);
     scroll-snap-align: center;
+    a {
+        text-align: center;
+    }
     &-image {
         margin: 0rem auto .4rem auto;
         width: 10rem;
