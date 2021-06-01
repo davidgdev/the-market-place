@@ -23,7 +23,6 @@
   },
   "scripts": {
     "test": " mocha tests/api.test.js  --exit",
-    "build": "babel src --out-dir dist",
     "dev": "nodemon src/app.js --exec babel-node",
     "start": "node dist/app.js"
   },
