@@ -18,11 +18,13 @@
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
     "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.0",
     "nodemon": "^2.0.7"
   },
   "scripts": {
     "test": " mocha tests/api.test.js  --exit",
+    "build": "babel src --out-dir dist",
     "dev": "nodemon src/app.js --exec babel-node",
     "start": "node dist/app.js"
   },
