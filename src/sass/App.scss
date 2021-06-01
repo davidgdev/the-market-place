@@ -24,7 +24,8 @@
 
 
 // Pages
-@import "pages/_Category";
+@import "pages/_ProductList";
+@import "pages/_SellerProduct";
 @import "pages/Home";
 
 // Forms
@@ -46,8 +47,3 @@
 .form__input-check{
   @include input-check;
 }
-
-
-
-  
-  

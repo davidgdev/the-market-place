@@ -4,8 +4,9 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 import Login from '../pages/Login';
 import Category from '../pages/Category';
+import Categories from '../pages/Categories';
+import Product from '../pages/Product';
 import Home from '../pages/Home';
-
 
 function NavBar(){
     return (
@@ -33,10 +34,15 @@ function NavBar(){
           </nav>
 
           <Switch>
-            
               <Route exact path="/login" component={Login}></Route>
-              <Route exact path="/categories" component={Category}></Route>
-          </Switch>
+              <Route exact path="/seller" component={SellerProducts}></Route>
+              <Route exact path="/categories/" component={Categories}></Route>
+              <Route exact path="/categories/:cat" component={Category}></Route>
+              <Route exact path="/products" component={Product}></Route>
+              <Route exact path="/signup" component={Signup}></Route>
+              <Route exact path="/upload" component={SellerProductsUpload}></Route>
+              <Route exact path="/update" component={SellerProductsUpdate}></Route>
+            </Switch>
         </BrowserRouter>
       );
 }
