@@ -31,6 +31,7 @@ db.getConnection( (error) => {
   }
 })
 
+app.use('', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/rol', require('./routes/rol'));
 app.use('/user', require('./routes/user'));
