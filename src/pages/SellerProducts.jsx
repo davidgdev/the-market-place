@@ -12,7 +12,7 @@ function SellerProducts () {
     },[])
 
     function getSellerProducts () {
-        fetch('/mockAPI/sellerProducts.json')
+        fetch('https://608d9e2cfe2e9c00171e1daf.mockapi.io/api/v1/products')
         .then(response => {
             return response.json();
         })
