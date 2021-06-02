@@ -5,15 +5,16 @@ import '../sass/components/_FeaturedProductCard.scss';
 
 import ProductButton from './ProductButton';
 
-function FeatureProductCard ({title, price, image, index}) {
-    const featuredClass = (index % 2 == 0) ? 'odd' : 'even';
+function FeatureProductCard ({name, price, image, id}) {
+    const featuredClass = (id % 2 == 0) ? 'odd' : 'even';
+    console.log(id)
     return (
-     <article className={`featured__card ${featuredClass}`} >
+     <article className={`featured__card ${featuredClass}`} id={id} >
         <Link to="/products">
-            <img className="featured__card-image" src={image} alt={title} />
+            <img className="featured__card-image" src={image} alt={name} />
         </Link>
          <div className="featured__card-info">
-            <p className="featured__card-title">{title}</p>
+            <p className="featured__card-title">{name}</p>
             <div className="featured__card-info-bottom">
                 <div className="featured__card-info-details">
                     <p>${price}</p>
