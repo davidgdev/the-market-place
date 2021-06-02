@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sass/pages/_SellerProducts.scss';
+import '../sass/pages/_SellerProduct.scss';
 import UpdateProduct from '../components/UpdateProduct';
 import SideMenu from '../components/SideMenu';
 

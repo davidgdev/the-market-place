@@ -7,6 +7,8 @@
     outline: none;
     width: 336px;
     height: 45px;
+    padding: 0.5rem 1rem;
+    text-align-last: center;
 }
 
 @mixin label {
@@ -24,6 +26,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 @mixin form{
