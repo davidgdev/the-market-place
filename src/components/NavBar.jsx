@@ -64,7 +64,7 @@ function NavBar(){
               <Route exact path="/seller" component={SellerProducts}></Route>
               <Route exact path="/categories/" component={Categories}></Route>
               <Route exact path="/categories/:cat" component={Category}></Route>
-              <Route exact path="/products" component={Product}></Route>
+              <Route exact path="/products/:id" component={Product}></Route>
               <Route exact path="/signup" component={Signup}></Route>
               <Route exact path="/upload" component={SellerProductsUpload}></Route>
               <Route exact path="/update" component={SellerProductsUpdate}></Route>
