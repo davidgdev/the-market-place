@@ -34,26 +34,31 @@ exports.login = async (req, res) => {
                 });
             } else {
                 const id = results[0].id_u;
-                const token = jwt.sign({
-                    id
-                }, process.env.JWT_SECRET, {
-                    expiresIn: process.env.JWT_EXPIRES_IN
-                });
+                db.query('SELECT * FROM users_rols WHERE user_r_fk= ?', [id], async (error, results) => {
 
-                console.log("The token is: " + token);
+                    const rols = [];
+                    results.forEach(element =>
+                        rols.push(element.rol_u_r_fk));
+                    const token = jwt.sign({
+                        id,
+                        rols
+                    }, process.env.JWT_SECRET, {
+                        expiresIn: process.env.JWT_EXPIRES_IN
+                    });
 
-                const cookieOptions = {
-                    expires: new Date(
-                        Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
-                    ),
-                    httpOnly: true
-                }
-                res.cookie('jwt', token, cookieOptions);
-                res.status(200).json({
-                    "status": 200,
-                    "message:": 'User Login',
-                    "id": id,
-                    "token": token,
+                   const cookieOptions = {
+                        expires: new Date(
+                            Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
+                        ),
+                        httpOnly: true
+                    }
+                    res.cookie('jwt', token, cookieOptions);
+                    res.status(200).json({
+                        "status": 200,
+                        "message:": 'User Login',
+                        "id": id,
+                        "token": token,
+                    });
                 });
             }
 
@@ -137,4 +142,3 @@ exports.register = (req, res) => {
     });
 
 }
-
