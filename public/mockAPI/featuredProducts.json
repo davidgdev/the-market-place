@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "name": "Oil - Macadamia",
+    "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "price": 29.13,
+    "quantity": 30,
+    "category": "Clothing",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/757/400/400.jpg?hmac=eI31C3SciqTt5v7CpCFNvKREavuTOUPbcw0-vBS576A",
+    "featured": 1
+  },
+  {
+    "id": 2,
+    "name": "Cheese - Mascarpone",
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "price": 21.38,
+    "quantity": 24,
+    "category": "Technology",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/1061/400/400.jpg?hmac=apVWU5tv7JVHhY0Ae7YjiHiPpS5rRtrjVp5MuQ7Gc9E",
+    "featured": 1
+  },
+  {
+    "id": 3,
+    "name": "Appetizer - Tarragon Chicken",
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "price": 94.19,
+    "quantity": 50,
+    "category": "Clothing",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/1026/400/400.jpg?hmac=9nxaKAoZxDITamZaNU3dULYNcvxB6DNkPSnsO207MYo",
+    "featured": 1
+  },
+  {
+    "id": 4,
+    "name": "Wine - Red, Gallo, Merlot",
+    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "price": 56.18,
+    "quantity": 16,
+    "category": "Travel",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/67/400/400.jpg?hmac=wlcqJPOdBr1W3h-XmG1YRKKBfSI8uFQ0EOaVR1nbuIc",
+    "featured": 0
+  },
+  {
+    "id": 5,
+    "name": "Tea - Mint",
+    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "price": 45.86,
+    "quantity": 39,
+    "category": "Fitness"
+  },
+  {
+    "id": 6,
+    "name": "Curry Paste - Madras",
+    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+    "price": 18.37,
+    "quantity": 9,
+    "category": "Technology",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/896/400/400.jpg?hmac=t5cSR3FAX0B8F6RdKvfOrL0y7Ams72GPlnRbmN_arA4",
+    "featured": 1
+  },
+  {
+    "id": 7,
+    "name": "Remy Red Berry Infusion",
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+    "price": 75.34,
+    "quantity": 40,
+    "category": "Clothing",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/74/400/400.jpg?hmac=bDtryDbES_9o6a51PQtx9RcTIxxrPQm-_c7yZjHkL2Q",
+    "featured": 1
+  },
+  {
+    "id": 8,
+    "name": "Wine - White, Riesling, Henry Of",
+    "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+    "price": 70.49,
+    "quantity": 50,
+    "category": "Technology",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/675/400/400.jpg?hmac=AV8UV9SsVepgZVRCrQ_mulAKfHbkFXR2ej3awSjchks",
+    "featured": 1
+  },
+  {
+    "id": 9,
+    "name": "Pork - Backfat",
+    "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "price": 33.54,
+    "quantity": 19,
+    "category": "Travel",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/628/400/400.jpg?hmac=uQnrWHhKS3XBUnJaTHJHb7TBhQX7uZ0p1q_Y2hLnEWY",
+    "featured": 1
+  },
+  {
+    "id": 10,
+    "name": "Tuna - Yellowfin",
+    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "price": 97.7,
+    "quantity": 38,
+    "category": "Technology",
+    "seller": "johndoe",
+    "image": "https://i.picsum.photos/id/610/400/400.jpg?hmac=MjvHW1fTBkifVnK6d5IJgLDtdpM5_n8WqDBv8imkpcw",
+    "featured": 1
+  }
+]
