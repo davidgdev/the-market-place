@@ -7,7 +7,7 @@ function RelatedProductCard ({name, price, image, id}) {
     const featuredClass = (id % 2 == 0) ? 'odd' : 'even';
     return (
      <article className={`related__card ${featuredClass}`} >
-        <Link to="/products">
+        <Link to={`/products/${id}`}>
             <img className="related__card-image" src={image} alt={name} />
         </Link>
          <div className="related__card-info">

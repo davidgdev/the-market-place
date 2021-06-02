@@ -20,7 +20,7 @@ export const FeaturedProducts = () => {
     setProducts(related)
   }
   
-  const relatedProducts = products.filter(products => products.featured === 1) 
+  const relatedProducts = products.filter(products => products.category == "Technology") 
 
   return (
   

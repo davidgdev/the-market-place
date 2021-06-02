@@ -10,7 +10,7 @@ function FeatureProductCard ({name, price, image, id}) {
     console.log(id)
     return (
      <article className={`featured__card ${featuredClass}`} id={id} >
-        <Link to="/products">
+        <Link to={`/products/${id}`}>
             <img className="featured__card-image" src={image} alt={name} />
         </Link>
          <div className="featured__card-info">

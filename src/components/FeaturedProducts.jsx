@@ -21,7 +21,7 @@ export const FeaturedProducts = () => {
     setProducts(featured)
   }
   
-  const featuredProducts = products.filter(products => products.featured === 1) 
+  const featuredProducts = products.filter(products => products.featured === true) 
 
   return (
 
