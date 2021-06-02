@@ -1,7 +1,7 @@
 import React from 'react';
-import '../sass/components/_Signup.scss'
+import '../sass/components/_SignupForm.scss'
 
-function Signup(){
+function SignupForm(){
     return (
         <section className="signup">
             <form className="signup__form">
@@ -29,4 +29,4 @@ function Signup(){
     )
 }
 
-export default Signup;
+export default SignupForm;

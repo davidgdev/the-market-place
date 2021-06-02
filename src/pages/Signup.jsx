@@ -2,32 +2,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../sass/pages/_Login.scss';
 
-import LoginForm from '../components/LoginForm';
+import SignupForm from '../components/Signup';
 import NavBar from '../components/NavBar';
-import Logo from '../components/Logo';
 import SideBar from '../components/SideBar';
 
-function Login(){
+
+
+function Signup(){
     return(
         <section className="login">
             <section id="login__header">
-                <Logo/>
                 <NavBar/>
             </section>
+            
             <section id="login__side">
                 <SideBar/>
             </section>
             <section id="login__body">
                 <h1 className="login__title">Login</h1>
-                <LoginForm btn_text_1="go shopping"></LoginForm>
-                <div className="login__externals">
-                    <Link to="/" className="login__password">Forgot password?</Link>
-                    <Link to="/signup" className="login__signup">Create account</Link>
-                </div>
+                <SignupForm />
             </section>
+            <div className="login__externals">
+                <Link to="/login" className="login__signup">Already have an account? Sign In</Link>
+            </div>
         </section>
     )
 }
 
-export default Login;
+export default Signup;
 
