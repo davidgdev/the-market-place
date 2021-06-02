@@ -1,79 +1,48 @@
-import React, { Component } from 'react'
-import RelatedProductCard from './RelatedProductCard'
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  DotGroup
-} from 'pure-react-carousel'
-import 'pure-react-carousel/dist/react-carousel.es.css'
-
+import React, {useState, useEffect} from 'react';
+import RelatedProductCard from './RelatedProductCard';
 import '../sass/components/_RelatedProducts.scss'
 
-const CARD_WIDTH = 270;
+const apiUrl = 'https://60b6e02417d1dc0017b88701.mockapi.io/api/v1/products';
 
-class RelatedProducts extends Component {
-    state = {
-      cards: 2
-    };
+export const FeaturedProducts = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts()
+  }, [])
+
+
+  const getProducts = async () => {
+    const data = await fetch(apiUrl);
+    const related = await data.json();
+    console.log(related);
+    setProducts(related)
+  }
   
-    selfRef = React.createRef();
+  const relatedProducts = products.filter(products => products.featured === 1) 
 
-    updateDimensions = () => {
-      this.setState({
-        width: this.selfRef.current.offsetWidth,
-        cards: Math.floor(this.selfRef.current.offsetWidth / CARD_WIDTH) || 1
-      });
-    };
+  return (
+  
+   <section className="related_products-container" >
+      <h2>related products</h2>
+      <div className="related_products-slider">
+        {
+          relatedProducts.map(item => (
+              <RelatedProductCard 
+              name={item.name}  
+              price={item.price} 
+              image={item.image}
+              key={item.id}
+              id={item.id}
+               />
+          ))
+        }
 
-    componentDidMount() {
-      window.addEventListener("resize", this.updateDimensions);
-      this.updateDimensions();
-    }
 
-    componentWillUnmount() {
-      window.removeEventListener("resize", this.updateDimensions);
-    }
-    render() {
-        return (
-            <section className="related_products-container"
-              ref={this.selfRef}
-            >
-                <h2>Related Products</h2>
-                  <CarouselProvider 
-                    isPlaying= 'false'
-                    naturalSlideWidth={CARD_WIDTH}
-                    naturalSlideHeight={340}
-                    totalSlides={5}
-                    visibleSlides={this.state.width / CARD_WIDTH}
-                    currentSlide={1}
-                  >
-                    <Slider>
-                      <Slide index={0}>
-                        <RelatedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                      It has 100 blank pages to be filled with your stories." price="10.00" quantity="5"  index="0" />
-                      </Slide>
-                      <Slide index={1}>
-                        <RelatedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                      It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" index="1" />
-                      </Slide>
-                      <Slide index={2}>
-                        <RelatedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                      It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" index="2" />
-                      </Slide>
-                      <Slide index={3}>
-                        <RelatedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                      It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" index="3" />
-                      </Slide>
-                      <Slide index={4}>
-                        <RelatedProductCard title="blue notebook" description="Save all your notes in this amazing notebook. 
-                      It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" index="4" />
-                      </Slide>
-                    </Slider>
-                  </CarouselProvider>
-            </section>
-        );
-    }
+      </div>
+  </section>
+  )
 }
 
-export default RelatedProducts;
+export default FeaturedProducts;
