@@ -2,11 +2,25 @@
 
 .featured_products-container {
     padding: 2rem 2rem;
+    margin-bottom: 80px;
     h2 {
         margin-top: 1rem;
         margin-bottom: 1rem;
         width: 100%;
         text-align: left;
+    }
+    .featured_products-slider {
+        display: flex;
+        flex-wrap: nowrap;
+        // gap: 30px;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
     }
 }
 .carousel__inner-slide {
