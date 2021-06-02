@@ -12,27 +12,27 @@ function HomeCategories () {
      <section className="home_categories">
          <h2>categories</h2>
             <article className="category__card">
-               <Link className="category__card-link" to="/categories">
+               <Link className="category__card-link" to="/categories/technology">
                   <img className="category__card-image" src={imgTec} alt="Technology Category" />
                   <p className="category__card-title">Technology</p>
                </Link>  
             </article>
 
          <article className="category__card">
-            <Link className="category__card-link" to="/categories">
-               <img className="category__card-image" src={imgClo} alt="Technology Category" />
+            <Link className="category__card-link" to="/categories/clothing">
+               <img className="category__card-image" src={imgClo} alt="Clothing Category" />
                <p className="category__card-title">Clothing</p>
             </Link>
          </article>
          <article className="category__card">
-            <Link className="category__card-link" to="/categories">
-               <img className="category__card-image" src={imgFit} alt="Technology Category" />
+            <Link className="category__card-link" to="/categories/fitness">
+               <img className="category__card-image" src={imgFit} alt="Fitness Category" />
                <p className="category__card-title">Fitness</p>
             </Link>
          </article>
          <article className="category__card">
-            <Link className="category__card-link" to="/categories">
-               <img className="category__card-image" src={imgTra} alt="Technology Category"  />
+            <Link className="category__card-link" to="/categories/travel">
+               <img className="category__card-image" src={imgTra} alt="Travel Category"  />
                <p className="category__card-title">Travel</p>
       
             </Link>

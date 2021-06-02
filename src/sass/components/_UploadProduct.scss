@@ -4,6 +4,7 @@
 .product__form{
     @include form; 
     gap: 12px;
+    margin: 2rem 0;
 }
 
 .form_images{
@@ -12,4 +13,24 @@
 
 .button-upload{
     margin-right: 15px;
+}
+
+.success {
+    background-color: rgba(105, 167, 115, 0.4);
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.failure {
+    background-color: rgba(162, 59, 26, 0.4);
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
 }
