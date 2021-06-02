@@ -3,8 +3,9 @@ import '../sass/components/_ProductListCard.scss';
 import image from '../assets/dummy.png';
 
 import ProductButton from './ProductButton';
+import NavButton from './NavButton';
 
-function ProductListCard ({title, description, price, quantity, btn_text_1, btn_text_2, seller, category}) {
+function ProductListCard ({title, description, price, quantity, btn_text_1, btn_text_2, seller, category, buttonLink}) {
     return (
      <article className="hcard">
          <img className="hcard__image" src={image} alt={title} />
@@ -20,7 +21,7 @@ function ProductListCard ({title, description, price, quantity, btn_text_1, btn_
                     <p className="hcard__price"><span className="hcard__property">Price:</span> $ {price}</p>
                 </div>
                 <div className="hcard__buttons">
-                    <ProductButton text={btn_text_1} style="btn btn-primary"/>
+                    <NavButton link={buttonLink} text={btn_text_1} style="btn btn-primary"/>
                     <ProductButton text={btn_text_2} style="btn btn-secondary"/>
                 </div>
             </div>

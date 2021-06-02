@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+
+.sideMenu {
+    margin: 2rem 2rem;
+
+    &__nav {
+        margin-bottom: 1rem;
+        list-style-type: none;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        font-weight: bold;
+        list-style-type: none;
+        color: black;
+
+    }
+
+}
