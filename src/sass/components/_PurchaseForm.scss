@@ -1,0 +1,26 @@
+.purchase{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+        
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px; 
+    }
+    
+}
+
+.form__checkbox{
+    justify-content: center;
+}
+
+.form__label{
+    margin-right: 5px;
+
+}
+
+#number-card{
+    width: 100%;
+}

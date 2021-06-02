@@ -1,4 +1,5 @@
 import React from 'react';
+import '../sass/components/_PurchaseForm.scss';
 
 function Purchase(){
     return (
@@ -15,10 +16,12 @@ function Purchase(){
                 <label className="form__label">number</label>
                 <input id="number-card" type="number" className="form__input"/>
 
-                <label className="form__label">expiration date</label>
-                <input id="expiration-card" type="date" className="form__input"/>
-                <label className="form__label">security number</label>
-                <input id="security-card" type="number" className="form__input"/>
+                <div className="form__number">
+                    <label className="form__label">expiration date</label>
+                    <input id="expiration-card" type="date" className="form__input"/>
+                    <label className="form__label">security number</label>
+                    <input id="security-card" type="number" className="form__input"/>
+                </div>
             </form>
         </section>
     )

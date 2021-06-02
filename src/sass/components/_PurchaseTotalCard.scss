@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+
+.totalCard{
+    background-color: $background-gray;
+    width: 50%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.quantity-total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#quantity{
+    width: 10%;
+}
