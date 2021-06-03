@@ -14,9 +14,8 @@ from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 class UserList(APIView):
-
-    
-
-
-
+    def get(self, request):
+        users = Users.objects.all()
+        serializer = UsersSerializer(users, many=True)
+        return Response(serializer.data)
     # return HttpResponse('Working')
