@@ -11,7 +11,7 @@ function SellerProductList ({products, btn_text_1, btn_text_2}) {
                 <ProductListCard key={item.id} title={item.name} description={item.description} price={item.price} quantity={item.quantity}
                 btn_text_1={btn_text_1} btn_text_2={btn_text_2} 
                 category="hcard__details--hidden" seller="hcard__details"
-                buttonLink="/update"
+                buttonLink={`/update/${item.id}`}
                 />
             )
         }
