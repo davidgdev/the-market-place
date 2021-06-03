@@ -1,11 +1,13 @@
 const express = require("express");
 const mysql = require("mysql");
 const dotenv = require('dotenv');
+var cors = require('cors')
 const cookieParser = require('cookie-parser');
 
 dotenv.config({ path: './.env'});
 
 const app = express();
+app.use(cors())
 const port =process.env.PORT || 3000;
 
 const db = mysql.createPool({
@@ -35,6 +37,7 @@ app.use('', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/rol', require('./routes/rol'));
 app.use('/user', require('./routes/user'));
+app.use('/payment',require('./routes/pay'))
 
 app.listen(port, () => {
   console.log(`Server started on Port ${port}`);
