@@ -1,7 +1,10 @@
 @import '../abstracts/variables';
 
 .featured_products-container {
+    width: 100%;
+    max-width: 1440px;
     padding: 2rem 2rem;
+    margin: 0 auto;
     margin-bottom: 80px;
     h2 {
         margin-top: 1rem;
