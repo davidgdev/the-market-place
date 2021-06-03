@@ -6,6 +6,8 @@ var mysql = require("mysql");
 
 var dotenv = require('dotenv');
 
+var cors = require('cors');
+
 var cookieParser = require('cookie-parser');
 
 dotenv.config({
@@ -19,6 +21,11 @@ var db = mysql.createPool({
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE
 });
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.urlencoded({
   extended: false
 }));
@@ -31,9 +38,11 @@ db.getConnection(function (error) {
     console.log("MYSQL Connected...");
   }
 });
+app.use('', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/rol', require('./routes/rol'));
 app.use('/user', require('./routes/user'));
+app.use('/payment', require('./routes/pay'));
 app.listen(port, function () {
   console.log("Server started on Port ".concat(port));
 });
