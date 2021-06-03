@@ -11,7 +11,6 @@ function Login(){
     return(
         <section className="login">
             <section id="login__header">
-                <Logo/>
                 <NavBar/>
             </section>
             <section id="login__side">
