@@ -2,6 +2,7 @@
 
 .home-banner {
     width: 96%;
+    max-width: 1440px;
     height: 350px;
     margin: 0 auto;
     background-color: $light-brown;
@@ -10,6 +11,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 1rem;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
     p {
         width: 100%;
         color: white;
@@ -21,9 +25,12 @@
             margin-left: 4rem;
         }
         @media (max-width: 768px){
-            padding: 5rem 3rem;
-            font-size: 1.5rem;
+            padding: 13rem 4rem;
+            font-size: 1.3rem;
             line-height: 2rem;
+            span {
+                margin-left: 0rem;
+            }
         }
     }
     
