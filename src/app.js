@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 dotenv.config({ path: './.env'});
 
 const app = express();
-app.use(cors())
+app.use(cors({origin: '*'}));
 const port =process.env.PORT || 3000;
 
 const db = mysql.createPool({
