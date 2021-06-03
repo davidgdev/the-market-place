@@ -20,7 +20,7 @@ exports.process = (req, resul) => {
     } = req.body;
 
     db.query(`SELECT stock FROM  products WHERE id_p=${id_p}`, (err, res) => {
-        if (res[0].stock > 0) {
+        if (res[0].stock > 0 && (res[0].stock-quantity)>=-1) {
             db.query('INSERT INTO payments SET ?', {
                 name_pa: name,
                 type_pa: type,
