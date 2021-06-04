@@ -26,7 +26,7 @@ async function registerUser(data){
     }
 }
 
-function Signup(){
+function SignupForm(){
     const [first_name, setFirstName] = useState();
     const [last_name, setLastName] = useState();
     const [email, setEmail] = useState();
@@ -103,4 +103,4 @@ function Signup(){
     )
 }
 
-export default Signup;
+export default SignupForm;

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
-import '../sass/components/_Login.scss';
+import '../sass/components/_LoginForm.scss';
 
 
 async function loginUser(credentials) {
@@ -39,22 +38,14 @@ function Login({setToken}){
     }
 
     return(
-        <section className="login">
-            <h1 className="login__title">Login</h1>
+        <form className="login__form" onSubmit={handleSubmit}>
+            <label className="form__label">email</label>
+            <input id="email" type="email" className="form__input" onChange={e => setUserName(e.target.value)}/>
+            <label className="form__label">password</label>
+            <input id="password" type="password" className="form__input" onChange={e => setPassword(e.target.value)}/>
+            <button type="submit" className="form__button">go shopping</button>
+        </form>
 
-            <form className="login__form" onSubmit={handleSubmit}>
-                <label className="form__label">email</label>
-                <input id="email" type="email" className="form__input" onChange={e => setUserName(e.target.value)}/>
-                <label className="form__label">password</label>
-                <input id="password" type="password" className="form__input" onChange={e => setPassword(e.target.value)}/>
-                <button type="submit" className="form__button">go shopping</button>
-            </form>
-
-            
-                
-            
-
-        </section>
     )
 }
 

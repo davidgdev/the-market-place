@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'
 import '../sass/components/_ProductDescription.scss';
 
 import Photo from './Photo';
 import PhotoReel from './PhotoReel';
 import ProductDetails from './ProductDetails';
 
+const apiUrl = "https://60b6e02417d1dc0017b88701.mockapi.io/api/v1/products/";
 
-function ProductDescription ({title, description, price, quantity}) {
+function ProductDescription () {
+    const { id } = useParams();
+    
+
+    const [product, setProduct] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const data = await fetch(apiUrl+id);
+            const productDetails = await data.json();
+            setProduct(productDetails);
+        }
+
+        getData();
+    }, [id]);
+    
     return (
      <section className="prodDesc">
-        <PhotoReel photos=""/>
-        <Photo size="photo__img photo__img--large" source=""/>
-        <ProductDetails title="blue notebook" description="Save all your notes in this amazing notebook. 
-                It has 100 blank pages to be filled with your stories." price="10.00" quantity="5" seller="Fulanito Detal"/>
+        <PhotoReel photos={product.image} />
+        <Photo size="photo__img photo__img--large" image={product.image}/>
+        <ProductDetails name={product.name} description={product.description} price={product.price} quantity={product.quantity} seller={product.seller}/>
      </section>
     )
 };
