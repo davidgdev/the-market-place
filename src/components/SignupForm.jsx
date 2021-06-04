@@ -1,5 +1,5 @@
 import React , {useState}from 'react';
-import '../sass/components/_Signup.scss';
+import '../sass/components/_SignupForm.scss';
 import Alert from './Alert';
 
 async function registerUser(data){

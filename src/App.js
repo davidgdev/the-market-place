@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './sass/App.scss';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -14,14 +14,8 @@ import SellerProductsUpload from './pages/SellerProductsUpload';
 import SellerProductsUpdate from './pages/SellerProductsUpdate';
 
 function App() {
-  const [token, setToken] = useState();
 
-  if(!token) {
-    return <Login setToken={setToken}></Login>
-  }
-
-
-  return(
+return(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}></Route>

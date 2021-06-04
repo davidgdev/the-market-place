@@ -19,7 +19,7 @@ function Signup(){
                 <SideBar/>
             </section>
             <section id="login__body">
-                <h1 className="login__title">Login</h1>
+                <h1 className="login__title">Sign up</h1>
                 <SignupForm />
             </section>
             <div className="login__externals">
