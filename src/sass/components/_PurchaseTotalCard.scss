@@ -2,18 +2,19 @@
 
 .totalCard{
     background-color: $background-gray;
-    width: 50%;
-    height: 150px;
-    padding: 15px;
+    width: 600px;
+    padding: 1rem;
     border-radius: 15px;
 }
 
 .quantity-total{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 #quantity{
-    width: 10%;
+    width: 80px;
+    margin: 0 0.5rem;
 }

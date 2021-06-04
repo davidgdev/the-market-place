@@ -1,19 +1,23 @@
 .purchase{
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 1rem;
+    width: 600px;
+    background-color: white;
         
     &__form{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: stretch;
         gap: 15px; 
+        width: 100%;
+        padding: 1rem;
     }
     
 }
 
 .form__checkbox{
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .form__label{
@@ -24,3 +28,18 @@
 #number-card{
     width: 100%;
 }
+
+#card-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#expiration-card, #security-card{
+    width: 100%;
+}    

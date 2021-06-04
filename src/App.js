@@ -13,9 +13,12 @@ import SellerProducts from './pages/SellerProducts';
 import SellerProductsUpload from './pages/SellerProductsUpload';
 import SellerProductsUpdate from './pages/SellerProductsUpdate';
 
+const ModalContext = React.createContext();
+
 function App() {
 
 return(
+  <ModalContext.Provider value={"modal-hidden"} >
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}></Route>
@@ -29,6 +32,7 @@ return(
         <Route exact path="/update/:id" component={SellerProductsUpdate}></Route>
       </Switch>
     </BrowserRouter>
+  </ModalContext.Provider>
   )
 }
 

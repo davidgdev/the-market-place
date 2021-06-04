@@ -1,6 +1,5 @@
 import React from 'react';
 import '../sass/components/_ProductDetails.scss';
-
 import ProductButton from './ProductButton';
 
 
@@ -16,7 +15,7 @@ function ProductDescription ({name, description, price, quantity, seller}) {
                 </div>
                 <div className="prodDetails__buy">
                     <p><span className="prodDetails__property prodDetails__price ">Price:</span> $ {price}</p>
-                    <ProductButton text="Buy Now" style="btn btn-secondary"/>
+                    <ProductButton text="Buy Now" style="btn btn-secondary" type="open-modal"/>
                 </div>
             </div>
      </section>
