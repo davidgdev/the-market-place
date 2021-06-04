@@ -10,17 +10,17 @@ const db = mysql.createPool({
 
 exports.process = (req, resul) => {
     const {
-        name,
         type,
         quantity,
         total,
-        id_s,
         id_b,
         id_p
     } = req.body;
 
-    db.query(`SELECT stock FROM  products WHERE id_p=${id_p}`, (err, res) => {
-        if (res[0].stock > 0 && (res[0].stock-quantity)>=-1) {
+    db.query(`SELECT * FROM  products WHERE id_p=${id_p}`, (err, res) => {
+        const name = res[0].name_p;
+        const id_s = res[0].user_fk;
+       if (res[0].stock > 0 && (res[0].stock-quantity)>=-1) {
             db.query('INSERT INTO payments SET ?', {
                 name_pa: name,
                 type_pa: type,
@@ -31,6 +31,7 @@ exports.process = (req, resul) => {
                     console.log(error);
                 } else {
                     const id_payment = results.insertId;
+                    console.log(id_payment)
                     db.query('INSERT INTO buys SET ?', {
                         user_seller: id_s,
                         user_buyer: id_b,
