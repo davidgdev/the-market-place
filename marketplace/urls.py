@@ -9,7 +9,9 @@ from marketplaceapi import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^users/', views.UserList.as_view())
+    url(r'^users/', views.UserList.as_view()),
+    url(r'^categorys/', views.CategoryList.as_view()),
+    url(r'^productsList/', views.ProductsList.as_view())
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

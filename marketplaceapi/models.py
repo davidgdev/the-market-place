@@ -16,11 +16,12 @@ class Buys(models.Model):
 class Categorys(models.Model):
     id_c = models.AutoField(primary_key=True)
     name_c = models.CharField(max_length=200)
-    product_c_fk = models.ForeignKey('Products', models.DO_NOTHING, db_column='product_c_fk')
 
     class Meta:
         managed = False
         db_table = 'categorys'
+    def __str__(self):
+        return self.id_c
 
 
 class Images(models.Model):
@@ -54,7 +55,7 @@ class Products(models.Model):
     stock = models.IntegerField()
     able = models.IntegerField()
     user_fk = models.IntegerField()
-    category_fk = models.IntegerField()
+    category_fk = models.ForeignKey(Categorys, models.DO_NOTHING, db_column='category_fk')
 
     class Meta:
         managed = False
@@ -84,7 +85,6 @@ class Users(models.Model):
     
     def __str__(self):
         return self.id_u
-         
 
 
 class UsersProducts(models.Model):
