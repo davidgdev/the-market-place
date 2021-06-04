@@ -3,7 +3,6 @@ import '../sass/components/_Signup.scss';
 import Alert from './Alert';
 
 async function registerUser(data){
-    console.log(data);
     try{
 
         const response = await fetch('https://marketplace-platzi.herokuapp.com/auth/register',{

@@ -1,25 +1,41 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import '../sass/components/_Login.scss';
 
 
-function loginUser(credentials) {
-    console.log(credentials);
+async function loginUser(credentials) {
+    try{
+        const response = await fetch('https://marketplace-platzi.herokuapp.com/auth/login',{
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+    })
+    const res = await response.json();
+
+    return res.token;
     
-   }
+    }catch(error){
+        console.log('Error', error);
+    }
+    
+}
 
-function Login(){
+function Login({setToken}){
 
-    const [username, setUserName] = useState();
+    const [email, setUserName] = useState();
     const [password, setPassword] = useState();
 
     const handleSubmit = async e =>{
         e.preventDefault();
 
-        await loginUser({
-            username,
+       const token =  await loginUser({
+            email,
             password
         });
+        setToken(token);
     }
 
     return(
@@ -35,8 +51,7 @@ function Login(){
             </form>
 
             
-                <Link to="/" className="login__password">Forgot password?</Link>
-                <Link to="/signup" className="login__signup">Create account</Link>
+                
             
 
         </section>
@@ -44,3 +59,7 @@ function Login(){
 }
 
 export default Login;
+
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
+}
