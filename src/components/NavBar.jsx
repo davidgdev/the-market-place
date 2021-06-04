@@ -17,6 +17,11 @@ function NavBar(){
                   </Link>
                 </li>
                 <li>
+                  <Link to="/seller" className="nav__item">
+                    My Products
+                  </Link>
+                </li>
+                <li>
                   <Link to="/login" className="nav__item">
                     Login/Signup
                   </Link>
