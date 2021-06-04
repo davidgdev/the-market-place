@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import '../sass/pages/_ProductList.scss';
 import CategoryProductList from '../components/CategoryProductList';
 import SideFilter from '../components/SideFilter';
+import FullNavbar from '../components/FullNavbar';
 
 function Category () {
     
@@ -26,11 +27,14 @@ function Category () {
     }
 
     return (
+        <>
+        <FullNavbar/>
         <main className="category grid">
             <SideFilter title={cat}/>
             <div id="separator" className="category__separator"/>
             <CategoryProductList products={products} btn_text_1="View" btn_text_2="Buy"/>
         </main>
+        </>
     )  
 };
 

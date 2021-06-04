@@ -3,11 +3,10 @@
 
 
 .login{
-    @include form; 
-    gap: 20px;
-
+    
     &__form{
         @include form;
+        margin-top: 35px;
         gap:12px;
     }
 
@@ -19,4 +18,11 @@
         color: $secondary;
     }
     
+}
+
+.login__externals{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
