@@ -106,6 +106,9 @@ https://marketplace-platzi.herokuapp.com/auth/register
 
 **login**
  https://marketplace-platzi.herokuapp.com/auth/login 
+ 
+ **payment**
+ https://marketplace-platzi.herokuapp.com/payment/process
 
 ## :shopping_cart: How to use
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
