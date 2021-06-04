@@ -11,15 +11,16 @@ var db = mysql.createPool({
 
 exports.process = function (req, resul) {
   var _req$body = req.body,
-      name = _req$body.name,
       type = _req$body.type,
       quantity = _req$body.quantity,
       total = _req$body.total,
-      id_s = _req$body.id_s,
       id_b = _req$body.id_b,
       id_p = _req$body.id_p;
-  db.query("SELECT stock FROM  products WHERE id_p=".concat(id_p), function (err, res) {
-    if (res[0].stock > 0) {
+  db.query("SELECT * FROM  products WHERE id_p=".concat(id_p), function (err, res) {
+    var name = res[0].name_p;
+    var id_s = res[0].user_fk;
+
+    if (res[0].stock > 0 && res[0].stock - quantity >= -1) {
       db.query('INSERT INTO payments SET ?', {
         name_pa: name,
         type_pa: type,
@@ -30,6 +31,7 @@ exports.process = function (req, resul) {
           console.log(error);
         } else {
           var id_payment = results.insertId;
+          console.log(id_payment);
           db.query('INSERT INTO buys SET ?', {
             user_seller: id_s,
             user_buyer: id_b,
