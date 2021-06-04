@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import ModalContext from '../App';
+import { ModalContext } from '../utils/modalStatus';
 import '../sass/components/_PurchaseModal.scss';
 import PurchaseTotalCard from '../components/PurchaseTotalCard';
 import PurchaseForm from '../components/PurchaseForm';
@@ -7,10 +7,10 @@ import ProductButton from '../components/ProductButton';
 
 function PurchaseModal(){
     
-    let modalStatus = useContext(ModalContext);
+    const { modalClass } = useContext(ModalContext);
 
     return (
-        <div id="modal" className="modal">
+        <div id="modal" className={modalClass}>
             <div className="modal-center">
                 <PurchaseTotalCard/>
                 <PurchaseForm/>

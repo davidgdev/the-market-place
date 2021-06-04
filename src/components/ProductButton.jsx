@@ -1,20 +1,20 @@
 import React, {useContext} from 'react';
-import ModalContext from '../App';
+import { ModalContext } from '../utils/modalStatus';
 import '../sass/components/_ProductButton.scss';
 
 function ProductButton ({text, style, type}) {
 
-    let modalStatus = useContext(ModalContext);
+    const { setModalClass } = useContext(ModalContext);
 
     function handleClick (ev) {
         switch (ev.target.value) {
             case "open-modal":
                 console.log("open modal window");
-                modalStatus = "modal";
+                setModalClass("modal");
                 break;
             case "close-modal":
                 console.log("close modal window");
-                modalStatus = "modal-hidden";
+                setModalClass("modal-hidden");
                 break;
             case "confirm-card":
                 console.log("confirm purchase card");

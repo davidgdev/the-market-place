@@ -4,6 +4,7 @@ import '../sass/pages/_ProductList.scss';
 import CategoryProductList from '../components/CategoryProductList';
 import SideFilter from '../components/SideFilter';
 import FullNavbar from '../components/FullNavbar';
+import PurchaseModal from '../components/PurchaseModal';
 
 function Category () {
     
@@ -33,6 +34,7 @@ function Category () {
             <SideFilter title={cat}/>
             <div id="separator" className="category__separator"/>
             <CategoryProductList products={products} btn_text_1="View" btn_text_2="Buy"/>
+            <PurchaseModal />
         </main>
         </>
     )  
