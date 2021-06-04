@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "Gorgeous Plastic Shoes",
+    "price": "220.00",
+    "quantity": 87,
+    "category": "Technology",
+    "seller": "Tricia Spencer",
+    "image": "http://placeimg.com/640/480/technics",
+    "featured": true,
+    "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+  },
+  {
+    "id": "2",
+    "name": "Intelligent Fresh Hat",
+    "price": "66.00",
+    "quantity": 21,
+    "category": "Technology",
+    "seller": "Florence Flatley II",
+    "image": "http://placeimg.com/640/480/business",
+    "featured": true,
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+  },
+  {
+    "id": "3",
+    "name": "Rustic Wooden Cheese",
+    "price": "269.00",
+    "quantity": 23,
+    "category": "Technology",
+    "seller": "Melissa Herzog Sr.",
+    "image": "http://placeimg.com/640/480/city",
+    "featured": true,
+    "description": "The Football Is Good For Training And Recreational Purposes"
+  },
+  {
+    "id": "4",
+    "name": "Sleek Steel Tuna",
+    "price": "526.00",
+    "quantity": 26,
+    "category": "Technology",
+    "seller": "Mitchell Marks",
+    "image": "http://placeimg.com/640/480/transport",
+    "featured": false,
+    "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+  },
+  {
+    "id": "5",
+    "name": "Sleek Frozen Car",
+    "price": "581.00",
+    "quantity": 12,
+    "category": "Technology",
+    "seller": "Wanda Morissette",
+    "image": "http://placeimg.com/640/480/abstract",
+    "featured": true,
+    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
+  },
+  {
+    "id": "6",
+    "name": "Ergonomic Cotton Chicken",
+    "price": "411.00",
+    "quantity": 47,
+    "category": "Technology",
+    "seller": "Billy Lowe",
+    "image": "http://placeimg.com/640/480/nightlife",
+    "featured": true,
+    "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+  },
+  {
+    "id": "7",
+    "name": "Handcrafted Wooden Mouse",
+    "price": "119.00",
+    "quantity": 53,
+    "category": "Technology",
+    "seller": "Terence Greenholt",
+    "image": "http://placeimg.com/640/480/city",
+    "featured": true,
+    "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality"
+  },
+  {
+    "id": "8",
+    "name": "Small Concrete Bike",
+    "price": "211.00",
+    "quantity": 91,
+    "category": "Technology",
+    "seller": "Cassandra Rempel",
+    "image": "http://placeimg.com/640/480/sports",
+    "featured": true,
+    "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
+  },
+  {
+    "id": "9",
+    "name": "Intelligent Fresh Chair",
+    "price": "847.00",
+    "quantity": 93,
+    "category": "Technology",
+    "seller": "Margaret Sanford I",
+    "image": "http://placeimg.com/640/480/nightlife",
+    "featured": true,
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+  },
+  {
+    "id": "10",
+    "name": "Rustic Granite Gloves",
+    "price": "215.00",
+    "quantity": 78,
+    "category": "Technology",
+    "seller": "Judy Kertzmann",
+    "image": "http://placeimg.com/640/480/business",
+    "featured": true,
+    "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+  }
+]

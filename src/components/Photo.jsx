@@ -1,8 +1,7 @@
 import React from 'react';
 import '../sass/components/_Photo.scss';
-import image from '../assets/dummy.png';
 
-function Photo ({size, source, description}) {
+function Photo ({size, source, description, image}) {
     return (
         <article className="photo__card">
                 <img className={size} src={image} alt={description} />

@@ -22,7 +22,7 @@ function ProductListCard ({title, description, price, quantity, btn_text_1, btn_
                 </div>
                 <div className="hcard__buttons">
                     <NavButton link={buttonLink} text={btn_text_1} style="btn btn-primary"/>
-                    <ProductButton text={btn_text_2} style="btn btn-secondary"/>
+                    <ProductButton text={btn_text_2} style="btn btn-secondary" type="open-modal"/>
                 </div>
             </div>
          </div>         
