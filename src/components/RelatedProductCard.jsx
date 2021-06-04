@@ -17,7 +17,7 @@ function RelatedProductCard ({name, price, image, id}) {
                     <p>${price}</p>
                 </div>
                 <div className="related__card-button">
-                    <ProductButton text="Buy Now" style="btn btn-secondary"/>
+                    <ProductButton text="Buy Now" style="btn btn-secondary" type="open-modal"/>
                 </div>
             </div>
          </div>

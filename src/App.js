@@ -1,6 +1,7 @@
 import React from 'react';
 import './sass/App.scss';
 
+import { ModalProvider } from './utils/modalStatus';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './pages/Login';
@@ -14,8 +15,9 @@ import SellerProductsUpload from './pages/SellerProductsUpload';
 import SellerProductsUpdate from './pages/SellerProductsUpdate';
 
 function App() {
-
+  
 return(
+  <ModalProvider >
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}></Route>
@@ -28,7 +30,8 @@ return(
         <Route exact path="/upload" component={SellerProductsUpload}></Route>
         <Route exact path="/update/:id" component={SellerProductsUpdate}></Route>
       </Switch>
-    </BrowserRouter>
+  </BrowserRouter>
+  </ModalProvider>
   )
 }
 

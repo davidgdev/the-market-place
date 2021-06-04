@@ -20,7 +20,7 @@ function FeatureProductCard ({name, price, image, id}) {
                     <p>${price}</p>
                 </div>
                 <div className="featured__card-button">
-                    <ProductButton text="Buy Now" style="btn btn-secondary"/>        
+                    <ProductButton text="Buy Now" style="btn btn-secondary" type="open-modal"/>        
                 </div>
             </div>
          </div>
