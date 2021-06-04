@@ -1,0 +1,22 @@
+.alert-green{
+    background: rgba(105, 167, 115, 0.4);
+}
+
+.alert-red{
+    background: rgba(162, 59, 26, 0.4);
+}
+
+.alert{
+    border-radius: 15px;
+    width: 40%;
+    height: 50px;
+
+    p{
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+
+#alert-success, #alert-wrong{
+    display: none;
+}

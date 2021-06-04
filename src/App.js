@@ -1,3 +1,4 @@
+import React from 'react';
 import './sass/App.scss';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -13,7 +14,8 @@ import SellerProductsUpload from './pages/SellerProductsUpload';
 import SellerProductsUpdate from './pages/SellerProductsUpdate';
 
 function App() {
-  return(
+
+return(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}></Route>
