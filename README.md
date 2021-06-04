@@ -106,6 +106,21 @@ https://marketplace-platzi.herokuapp.com/auth/register
 
 **login**
  https://marketplace-platzi.herokuapp.com/auth/login 
+ 
+ **get categories method get**
+ https://myapimarketplace.herokuapp.com/categories
+ 
+ **register categories method post**
+ https://myapimarketplace.herokuapp.com/categories
+ 
+ **get products method get**
+ https://myapimarketplace.herokuapp.com/products
+ 
+ **insert products method post**
+ https://myapimarketplace.herokuapp.com/products
+ 
+ **get catagories and products method get**
+ https://myapimarketplace.herokuapp.com/cp
 
 ## :shopping_cart: How to use
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
