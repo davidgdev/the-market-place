@@ -87,19 +87,19 @@ DATABASES = {
         # 'HOST': 'remotemysql.com',
         # 'PORT': '3306',
         #local credentials
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'marketplace',
-        # 'USER': 'root',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
-
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'g7efZaK64z',
-        'USER': 'g7efZaK64z',
-        'PASSWORD': 'nQTIOfAI1j',
-        'HOST': 'remotemysql.com',
-        'PORT': '3306',
+        'NAME': 'marketplace',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',        
+
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'g7efZaK64z',
+        # 'USER': 'g7efZaK64z',
+        # 'PASSWORD': 'nQTIOfAI1j',
+        # 'HOST': 'remotemysql.com',
+        # 'PORT': '3306',
 
     }
 }
