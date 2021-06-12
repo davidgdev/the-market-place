@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import IntegerField
 
 # Create your models here.
 class Buys(models.Model):
@@ -20,8 +21,9 @@ class Categorys(models.Model):
     class Meta:
         managed = False
         db_table = 'categorys'
+
     def __str__(self):
-        return self.id_c
+        return self.name_c
 
 
 class Images(models.Model):
@@ -59,7 +61,7 @@ class Products(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'products'
+        db_table = 'products'    
 
 
 class Rols(models.Model):
@@ -83,12 +85,12 @@ class Users(models.Model):
         managed = False
         db_table = 'users'
     
-    def __str__(self):
-        return self.id_u
+    # def __str__(self):
+    #     return self.id_u
 
 
 class UsersProducts(models.Model):
-    id_u_p = models.IntegerField()
+    id_u_p = models.IntegerField(primary_key=True)
     user_fk = models.ForeignKey(Users, models.DO_NOTHING, db_column='user_fk')
     product_fk = models.ForeignKey(Products, models.DO_NOTHING, db_column='product_fk')
 
