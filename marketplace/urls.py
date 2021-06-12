@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^categories', views.CategoriesList.as_view()),
     url(r'^products', views.ProductsList.as_view()),
     url(r'^cp', views.CategoryAndProducts.as_view()),
-    
+    path('product-detail/<int:pk>/', views.ProductDetail.as_view()),
     
 ]
 

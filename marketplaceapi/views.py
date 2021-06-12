@@ -1,4 +1,5 @@
 from django.http import HttpResponse, JsonResponse
+from django.http.response import Http404
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from django.shortcuts import get_object_or_404
@@ -12,7 +13,6 @@ from .serializers import *
 
 
 from django.core.serializers.json import DjangoJSONEncoder
-
 
 
 # Create your views here.
@@ -45,6 +45,7 @@ class CategoriesList(APIView):
 
 
 class ProductsList(APIView):
+    
     def get(self,request):
         products = Products.objects.all()
         serializer = ProductsSerializer(products,many=True)
@@ -69,9 +70,26 @@ class ProductsList(APIView):
 
         else:
             return Response('a problem has ocurred',status=500)    
+    
+
+    # def patch(self,request,*args,**kwards):
+    #     products = Products.objects.filter(id_p = pk).first
+    #     data = request.data
+        
+    #     products.name_p = data.get("name_p",products.name_p)
+    #     products.description_p = data.get("name_p",products.description_p)
+    #     products.sku = data.get("name_p",products.sku)
+    #     products.price = data.get("name_p",products.price)
+    #     products.stock = data.get("name_p",products.stock)
+    #     products.user_fk = data.get("name_p",products.user_fk)
+    #     products.category_fk = data.get("name_p",products.category_fk)
 
 
-
+    #     serializer= ProductsInsertSerializer(products)
+    #     # instance.save()
+    #     return Response(serializer.data)
+        
+        
 class CategoryAndProducts(APIView):
     def get(self, request):
         categories = Products.objects.all().order_by('category_fk')
@@ -79,3 +97,36 @@ class CategoryAndProducts(APIView):
         
         return Response(serializer_class.data, status=200)
     
+class ProductDetail(APIView):
+    def get_object(self,pk):
+        try:            
+            return Products.objects.get(pk = pk)
+        except Products.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        product = self.get_object(pk)
+        serializer = ProductsInsertSerializer(product)
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        product = self.get_object(pk)
+        serializer = ProductsInsertSerializer(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response('product update success')
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self, request, pk, format=None):
+        product = self.get_object(pk)
+        serializer = DeleteProduct(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response('product delete success')
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ProductDelete(APIView):
+    def delete(self, request, pk, format=None):
+        product = self.get_object(pk)
+        product.delete()
+        return Response('deleted succes',status=status.HTTP_204_NO_CONTENT)

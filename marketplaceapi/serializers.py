@@ -51,3 +51,24 @@ class CategorysAndProducts(serializers.ModelSerializer):
             'stock': instance.stock,
             'able': instance.able
         }
+
+
+class DeleteProduct(serializers.ModelSerializer):    
+
+    class Meta:        
+        model = Products
+        fields = '__all__'
+    
+    def to_representation(self, instance):
+        
+        return {                        
+            'id_p': instance.id_p,
+            'name_p': instance.name_p,
+            'description_p': instance.description_p,
+            'sku': instance.sku,
+            'price': instance.price,
+            'stock': instance.stock,
+            'able': 0,
+            'uer_fk': instance.user_fk,
+            'category_fk': instance.category_fk
+        }
