@@ -108,3 +108,11 @@ class ProductDetail(APIView):
         product = self.get_object(pk)
         serializer = ProductsInsertSerializer(product)
         return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        product = self.get_object(pk)
+        serializer = ProductsInsertSerializer(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response('product update success')
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
