@@ -116,3 +116,17 @@ class ProductDetail(APIView):
             serializer.save()
             return Response('product update success')
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self, request, pk, format=None):
+        product = self.get_object(pk)
+        serializer = DeleteProduct(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response('product delete success')
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ProductDelete(APIView):
+    def delete(self, request, pk, format=None):
+        product = self.get_object(pk)
+        product.delete()
+        return Response('deleted succes',status=status.HTTP_204_NO_CONTENT)
